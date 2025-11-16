@@ -1,0 +1,12 @@
+{
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "type_specific": {
+      "type": "player"
+    },
+    "flags": {
+      "is_on_ground": true
+    }
+  }
+}

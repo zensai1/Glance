@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "example": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player"
+        },
+        "killing_blow": {
+          "source_entity": {}
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "glance:arrow/ekp"
+  }
+}

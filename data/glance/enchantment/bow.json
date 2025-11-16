@@ -1,0 +1,83 @@
+{
+  "description": "Bow Damage",
+  "supported_items": [
+    "minecraft:bow",
+    "minecraft:arrow"
+  ],
+  "weight": 1,
+  "max_level": 255,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "any"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "direct_attacker",
+            "predicate": {
+              "type": "minecraft:arrow"
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "glance:arrow/kill"
+        },
+        "enchanted": "attacker",
+        "affected": "damaging_entity"
+      },
+      {
+        "effect": {
+          "type": "minecraft:damage_entity",
+          "damage_type": "minecraft:arrow",
+          "min_damage": {
+            "type": "minecraft:linear",
+            "base": 0,
+            "per_level_above_first": 1
+          },
+          "max_damage": {
+            "type": "minecraft:linear",
+            "base": 0,
+            "per_level_above_first": 1
+          }
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      }
+    ],
+    "minecraft:hit_block": [
+      {
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type": "minecraft:arrow"
+          }
+        },
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "glance:arrow/kill"
+        }
+      }
+    ],
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:set",
+          "value": 1e-8
+        }
+      }
+    ]
+  }
+}

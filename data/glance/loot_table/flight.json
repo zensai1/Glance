@@ -1,0 +1,36 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:feather",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:unbreakable": {},
+                "minecraft:enchantments": {
+                  "minecraft:binding_curse": 1
+                },
+                "minecraft:glider": {},
+                "minecraft:equippable": {
+                  "slot": "chest"
+                },
+                "minecraft:enchantment_glint_override": false
+              }
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:unbreakable": false,
+                "minecraft:enchantments": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

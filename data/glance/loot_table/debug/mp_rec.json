@@ -1,0 +1,80 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:echo_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "禁忌の薬",
+                "color": "light_purple",
+                "italic": false
+              },
+              "target": "item_name"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "右クリックで使用",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "即座にMPを最大まで回復する",
+                  "color": "gray",
+                  "italic": false
+                }
+              ],
+              "mode": "append"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:use_remainder": {
+                  "id": "minecraft:echo_shard",
+                  "components": {
+                    "minecraft:item_name": {
+                      "text": "禁忌の薬",
+                      "color": "light_purple",
+                      "italic": false
+                    },
+                    "minecraft:item_model": "minecraft:potion",
+                    "minecraft:potion_contents": {
+                      "potion": "minecraft:water",
+                      "custom_color": 15792383
+                    }
+                  }
+                },
+                "minecraft:consumable": {
+                  "consume_seconds": 0,
+                  "animation": "none",
+                  "sound": "minecraft:intentionally_empty",
+                  "has_consume_particles": false
+                },
+                "minecraft:item_model": "minecraft:potion",
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:water",
+                  "custom_color": 15792383
+                },
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:potion_contents"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "functions": []
+    }
+  ],
+  "functions": []
+}

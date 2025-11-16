@@ -1,0 +1,71 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_star",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "宝珠【調合】",
+                "color": "gold",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:max_stack_size": 1,
+                "minecraft:consumable": {
+                  "consume_seconds": 0,
+                  "animation": "block",
+                  "sound": "intentionally_empty",
+                  "has_consume_particles": false
+                },
+                "minecraft:use_remainder": {
+                  "id": "minecraft:firework_star",
+                  "components": {
+                    "minecraft:custom_name": {
+                      "text": "宝珠【調合】",
+                      "color": "gold",
+                      "italic": false
+                    },
+                    "minecraft:custom_data": "{Ability:15b}",
+                    "minecraft:enchantments": {
+                      "glance:ability": 1
+                    },
+                    "minecraft:enchantment_glint_override": false,
+                    "minecraft:tooltip_display": {
+                      "hide_tooltip": true,
+                      "hidden_components": [
+                        "minecraft:enchantments"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "右クリックで使用",
+                  "color": "green",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ],
+      "functions": []
+    }
+  ],
+  "functions": []
+}
