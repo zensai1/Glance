@@ -3,7 +3,7 @@
 
 
 ##エメラルドを一個渡す
-    #loot give @s loot glance:emerald
+    loot give @s loot glance:emerald
 
 
 

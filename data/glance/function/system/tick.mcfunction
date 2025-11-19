@@ -14,7 +14,7 @@
 
 
 ##Stateだよ
-    execute if data storage glance: {State:"standby"} run function glance:system/waiting
+    execute if data storage glance: {State:"Standby"} run function glance:system/waiting
     execute if data storage glance: {State:"InGame"} run function glance:system/game with storage glance: Game.Info
 
 ##矢のnbtを変更

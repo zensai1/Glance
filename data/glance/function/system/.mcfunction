@@ -36,6 +36,7 @@
     scoreboard players set *** Znsi.Reload 100
     scoreboard players set *** Znsi.MaxArrows 3
     scoreboard players set *** Znsi.MPRec 100
+    scoreboard players set *** Znsi.Upgrade 5
 
 
 ##Bossbar
@@ -60,4 +61,4 @@
 
 
 ##Storage
-    data modify storage glance: State set value "standby"
+    data modify storage glance: State set value "Standby"
