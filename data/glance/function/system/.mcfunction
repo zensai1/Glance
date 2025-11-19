@@ -25,6 +25,8 @@
     scoreboard objectives add Znsi.HitCheck dummy "投射物のHIT判定"
     scoreboard objectives add Znsi.MaxReload dummy "リロード速度"
     scoreboard objectives add Znsi.Restraint dummy "抑制タイマー"
+    scoreboard objectives add Znsi.QuickAction trigger "クイックアクション"
+    scoreboard objectives add Znsi.Upgrade dummy "アップグレード回数"
 
     scoreboard objectives add Znsi.Use.Bow used:bow
     scoreboard objectives add Znsi.Use.Echo_shard used:echo_shard

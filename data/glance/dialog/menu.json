@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Glance",
+    "color": "green"
+  },
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": {
+      "text": ""
+    }
+  },
+  "can_close_with_escape": false,
+  "exit_action": {
+    "label": {
+      "text": "閉じる"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger Znsi.QuickAction set -1"
+    }
+  },
+  "columns": 1,
+  "actions": [
+    {
+      "label": {
+        "text": "アップグレード"
+      },
+      "tooltip": {
+        "text": "基礎能力をアップグレードすることができる"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger Znsi.QuickAction set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "ネットショップ"
+      },
+      "tooltip": {
+        "text": "割高でショップからアイテムを購入できる"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger Znsi.QuickAction set 2"
+      }
+    }
+  ]
+}
