@@ -1,7 +1,6 @@
 #>glance:ability/reconnaissance_02
 #@execution -> glance:abilty/reconnaissance_01
 
-say HAPPY
 
 ##透明化とか付与
     effect give @s invisibility infinite 0 true

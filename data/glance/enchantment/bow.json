@@ -1,8 +1,7 @@
 {
   "description": "Bow Damage",
   "supported_items": [
-    "minecraft:bow",
-    "minecraft:arrow"
+    "minecraft:bow"
   ],
   "weight": 1,
   "max_level": 255,
