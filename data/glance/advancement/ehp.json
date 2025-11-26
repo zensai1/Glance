@@ -11,9 +11,12 @@
             "type": "minecraft:player"
           },
           "type": {
-            "direct_entity": {
-              "type": "minecraft:arrow"
-            }
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ]
           }
         }
       }

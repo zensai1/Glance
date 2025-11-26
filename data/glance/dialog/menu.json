@@ -39,7 +39,7 @@
         "text": "ネットショップ"
       },
       "tooltip": {
-        "text": "割高でショップからアイテムを購入できる"
+        "text": "アイテムを購入できる"
       },
       "action": {
         "type": "minecraft:run_command",

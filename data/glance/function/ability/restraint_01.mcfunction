@@ -4,7 +4,7 @@
 
 ##抑制TAGを外す
     tag @s remove Restraint
-    playsound minecraft:block.fire.extinguish record @s
+    playsound minecraft:block.chain.break record @s
     
 
 ##内部処理

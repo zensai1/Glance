@@ -7,9 +7,7 @@
 
 
 ##storageに代入するよ
-    execute store result storage glance: Game.Health double 1.0 run scoreboard players get *** Znsi.Health
     execute store result storage glance: Game.Info.Phase int 1.0 run scoreboard players get フェーズ Znsi.Phase
-    execute store result storage glance: Game.Info.Timer int 1.0 run scoreboard players get 残り時間： Znsi.Timer
     execute store result storage glance: Game.Info.Remaining int 1.0 if entity @a[gamemode=adventure]
 
 

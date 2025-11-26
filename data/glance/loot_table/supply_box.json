@@ -1,0 +1,56 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/01_seclusion"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/02_dashing"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/03_tensho"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/04_reflection"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/05_penetration"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/06_rapidfire"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/07_reconnaissance"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/08_memory"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/09_restraint"
+        }
+      ],
+      "functions": []
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:recovery_medicine"
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

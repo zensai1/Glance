@@ -1,15 +1,71 @@
 #>glance:.debug/test
 #@execution -> いろいろ
 
-#say 実行したよ
 
-##一度でも触ってたらメッセージを出す
-    $execute if data entity @s {data:{Player:[$(UUID)]}} run tellraw @a "[Glance] 一度触ってます"
-    $execute if data entity @s {data:{Player:[$(UUID)]}} run return 0
+##OhMyDat呼び出し
+    function #oh_my_dat:please
 
 
-$data modify entity @s data.uuid set value $(UUID)
-data modify entity @s data.Player append from entity @s data.uuid
-
-#summon interaction ~ ~ ~ {data:{my_other_field:99,my_array:[{abc:2b},{xyz:3b}]}}
-#summon interaction ~ ~ ~ {data:{Player:[],uuid:[]}}
+##Dialogの一部を格納する
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Dialog.Upgrade set value {\
+  "type": "minecraft:multi_action",\
+  "title": {\
+    "text": "アップグレード",\
+    "color": "green"\
+  },\
+  "body": {\
+    "type": "minecraft:plain_message",\
+    "contents": {\
+      "text": ""\
+    }\
+  },\
+  "can_close_with_escape": false,\
+  "exit_action": {\
+    "label": {\
+      "text": "閉じる"\
+    },\
+    "action": {\
+      "type": "minecraft:run_command",\
+      "command": "trigger Znsi.QuickAction set -1"\
+    }\
+  },\
+  "columns": 2,\
+  "actions": [\
+    {\
+      "label": {\
+        "text": "矢最大所持数増加"\
+      },\
+      "action": {\
+        "type": "minecraft:run_command",\
+        "command": "trigger Znsi.QuickAction set 1"\
+      }\
+    },\
+    {\
+      "label": {\
+        "text": "リロード速度上昇"\
+      },\
+      "action": {\
+        "type": "minecraft:run_command",\
+        "command": "trigger Znsi.QuickAction set 2"\
+      }\
+    },\
+    {\
+      "label": {\
+        "text": "最大MP上昇"\
+      },\
+      "action": {\
+        "type": "minecraft:run_command",\
+        "command": "trigger Znsi.QuickAction set 3"\
+      }\
+    },\
+    {\
+      "label": {\
+        "text": "MP回復速度上昇"\
+      },\
+      "action": {\
+        "type": "minecraft:run_command",\
+        "command": "trigger Znsi.QuickAction set 4"\
+      }\
+    }\
+  ]\
+}
