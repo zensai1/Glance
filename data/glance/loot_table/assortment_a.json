@@ -1,0 +1,62 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:white_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "宝珠詰め合わせセットA",
+                "color": "yellow",
+                "italic": false
+              },
+              "target": "custom_name"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "使うと2個宝珠を入手できる。",
+                  "color": "gray",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[右クリック] - 使用",
+                  "color": "green",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "minecraft:chest",
+                "minecraft:consumable": {
+                  "consume_seconds": 0,
+                  "animation": "block",
+                  "sound": "minecraft:intentionally_empty",
+                  "has_consume_particles": false
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "functions": []
+    }
+  ],
+  "functions": []
+}

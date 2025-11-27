@@ -23,6 +23,9 @@
     scoreboard players reset @a Znsi.Phase
     scoreboard players reset @a Znsi.Reload
     scoreboard players reset @a Znsi.Upgrade
+    scoreboard players reset @a Znsi.Rank
+    scoreboard players reset @a Znsi.Kill
+    scoreboard players reset @s Znsi.Hit
 
 
 ##Tag処理
@@ -45,8 +48,10 @@
     bossbar set znsi.phase visible false
 
 
-##持ち物
+##プレイヤー
     clear @a
+    effect clear @a
+    effect give @a instant_health 10 240 true
 
 
 ##サプライリセット

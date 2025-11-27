@@ -136,6 +136,8 @@
     execute if entity @a[scores={Znsi.QuickAction=1,Znsi.Page=0}] as @a[scores={Znsi.QuickAction=1,Znsi.Page=0}] at @s store result storage glance: Dialog.MaxUpgrade int 1 run scoreboard players get *** Znsi.Upgrade
     execute if entity @a[scores={Znsi.QuickAction=1,Znsi.Page=0}] as @a[scores={Znsi.QuickAction=1,Znsi.Page=0}] at @s run function glance:game/upgrade/ with storage glance: Dialog
 
+    execute if entity @a[scores={Znsi.QuickAction=2,Znsi.Page=0}] as @a[scores={Znsi.QuickAction=2,Znsi.Page=0}] at @s run function glance:game/netshop/
+
     execute if entity @a[scores={Znsi.QuickAction=1,Znsi.Page=100}] as @a[scores={Znsi.QuickAction=1,Znsi.Page=100}] at @s run function glance:game/upgrade/arrow
     execute if entity @a[scores={Znsi.QuickAction=2,Znsi.Page=100}] as @a[scores={Znsi.QuickAction=2,Znsi.Page=100}] at @s run function glance:game/upgrade/reload
     execute if entity @a[scores={Znsi.QuickAction=3,Znsi.Page=100}] as @a[scores={Znsi.QuickAction=3,Znsi.Page=100}] at @s run function glance:game/upgrade/mp
@@ -149,13 +151,25 @@
     execute if entity @a[tag=Upgrading,scores={Znsi.UpgradeTimer=0}] as @a[tag=Upgrading,scores={Znsi.UpgradeTimer=0}] at @s run function glance:game/upgrade/finish
     execute if entity @a[tag=Upgrading,predicate=glance:sneak] as @a[tag=Upgrading,predicate=glance:sneak] at @s run function glance:game/upgrade/cancel
 
-    execute if entity @a[scores={Znsi.QuickAction=-1,Znsi.Page=0..}] as @a[scores={Znsi.QuickAction=-1,Znsi.Page=0..}] at @s run function glance:game/upgrade/close
+    execute if entity @a[scores={Znsi.QuickAction=-1,Znsi.Page=0..100}] as @a[scores={Znsi.QuickAction=-1,Znsi.Page=0..100}] at @s run function glance:game/upgrade/close
+
+    execute if entity @a[scores={Znsi.Netshop=1,Znsi.Page=200}] as @a[scores={Znsi.Netshop=1,Znsi.Page=200}] at @s run function glance:game/netshop/recovery_medicine
+    execute if entity @a[scores={Znsi.Netshop=2,Znsi.Page=200}] as @a[scores={Znsi.Netshop=2,Znsi.Page=200}] at @s run function glance:game/netshop/assortment_a
+
+    execute if entity @a[scores={Znsi.QuickAction=-1,Znsi.Page=200}] as @a[scores={Znsi.QuickAction=-1,Znsi.Page=200}] at @s run function glance:game/netshop/close
+    execute if entity @a[scores={Znsi.Page=200},gamemode=spectator] as @a[scores={Znsi.Page=200},gamemode=spectator] at @s run function glance:game/netshop/close
 
 
 ##常時実行
     execute as @a[gamemode=adventure] at @s run scoreboard players enable @s Znsi.QuickAction
+    scoreboard players enable @a[gamemode=adventure] Znsi.Netshop
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:arrow"}}] as @e[type=item,nbt={Item:{id:"minecraft:arrow"}}] at @s run kill @s
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:bow"}}] as @e[type=item,nbt={Item:{id:"minecraft:bow"}}] at @s run kill @s
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:black_stained_glass_pane"}}] as @e[type=item,nbt={Item:{id:"minecraft:black_stained_glass_pane"}}] at @s run kill @s
     execute as @a at @s if items entity @s player.cursor bow run loot replace entity @s hotbar.0 loot glance:bow
     execute as @a at @s if items entity @s player.cursor bow run item replace entity @s player.cursor with air
+
+
+##残り人数
+    execute store result score *** Znsi.Remaining if entity @a[gamemode=adventure]
+    execute if score *** Znsi.Remaining matches 1 run function glance:game/winner

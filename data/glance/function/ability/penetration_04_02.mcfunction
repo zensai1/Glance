@@ -20,10 +20,17 @@
     loot give @a[tag=Attacker,tag=!NotGive] loot glance:emerald
 
 ##HITログを流す
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 0.. run scoreboard players add @a[tag=Attacker] Znsi.Hit 1
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 0 run tellraw @a [{"text":"["},{"bold":false,"color":"red","text":"HIT"},"]  ",{"bold":true,"selector":"@a[tag=Attacker]"},{"text":"  ->  "},{"bold":true,"selector":"@a[tag=Znsi.Target]"}]
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 0 as @a at @s run playsound entity.arrow.hit_player record @s
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run tellraw @a [{"text":"["},{"bold":false,"color":"dark_red","text":"KILL"},"]  ",{"bold":true,"selector":"@a[tag=Attacker]"},{"text":"  ->  "},{"bold":true,"selector":"@a[tag=Znsi.Target]"}]
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 as @a at @s run playsound minecraft:entity.lightning_bolt.thunder record @s
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run gamemode spectator @s
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run scoreboard players add @a[tag=Attacker] Znsi.Kill 1
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run title @s title {"color":"red","text":"You Died!"}
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run scoreboard players operation @s Znsi.Rank = *** Znsi.Rank
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run scoreboard players remove *** Znsi.Rank 1
 
 
 ##リセット

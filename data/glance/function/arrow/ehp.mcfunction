@@ -42,8 +42,13 @@
 
 
 ##命中ログを表示
+    scoreboard players add @a[tag=Attacker] Znsi.Hit 1
     execute if entity @s[advancements={glance:ekp=false}] run tellraw @a ["[",{"color":"red","text":"HIT"},{"color":"white","text":"]  "},{"bold":true,"color":"white","selector":"@a[tag=Attacker]"},{"color":"white","text":"  ->  "},{"bold":true,"color":"white","selector":"@s"}]
     execute if entity @s[advancements={glance:ekp=false}] as @a at @s run playsound entity.arrow.hit_player record @s
+
+
+##スポーン位置変更
+    spawnpoint @s ~ ~ ~
 
 
 ##内部処理

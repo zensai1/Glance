@@ -33,6 +33,10 @@
     scoreboard objectives add Znsi.Deathcount deathCount "矢以外で死んだとき用"
     scoreboard objectives add Znsi.Page dummy "GUI、Dialog"
     scoreboard objectives add Znsi.Emerald dummy "エメラルド所持数"
+    scoreboard objectives add Znsi.Rank dummy "順位"
+    scoreboard objectives add Znsi.Hit dummy "HIT数"
+    scoreboard objectives add Znsi.Kill custom:player_kills "Kill数"
+    scoreboard objectives add Znsi.Netshop trigger "ネットショップ"
     
 
     scoreboard objectives add Znsi.Use.Bow used:bow
@@ -72,3 +76,11 @@
 
 ##Storage
     data modify storage glance: State set value "Standby"
+
+
+##Team
+    team add Player
+    team modify Player collisionRule never
+    team modify Player friendlyFire true
+    team modify Player nametagVisibility never
+    team modify Player seeFriendlyInvisibles false

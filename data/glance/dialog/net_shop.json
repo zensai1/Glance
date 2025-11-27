@@ -1,0 +1,156 @@
+{
+  "type": "minecraft:notice",
+  "title": {
+    "text": "ネットショップ",
+    "color": "gold"
+  },
+  "body": [
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:water",
+            "custom_color": 15357241
+          },
+          "minecraft:lore": [
+            {
+              "text": "飲むと♡1個分回復する",
+              "color": "gray",
+              "italic": false
+            },
+            "　　",
+            {
+              "text": "操作",
+              "color": "green",
+              "italic": false
+            },
+            {
+              "text": "[右クリック長押し] - 回復薬使用",
+              "color": "green",
+              "italic": false
+            }
+          ],
+          "minecraft:tooltip_display": {
+            "hide_tooltip": false,
+            "hidden_components": [
+              "minecraft:potion_contents"
+            ]
+          },
+          "minecraft:custom_name": {
+            "text": "回復薬",
+            "color": "light_purple",
+            "italic": false
+          }
+        }
+      },
+      "description": {
+        "text": "  ",
+        "extra": [
+          {
+            "text": "[購入]",
+            "italic": false,
+            "underlined": true
+          }
+        ],
+        "click_event": {
+          "action": "run_command",
+          "command": "trigger Znsi.Netshop set 1"
+        },
+        "hover_event": {
+          "action": "show_text",
+          "value": {
+            "text": "[必要]\nエメラルド2個",
+            "color": "green",
+            "italic": false
+          }
+        }
+      },
+      "show_tooltip": true
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:white_dye",
+        "components": {
+          "minecraft:custom_name": {
+            "text": "宝珠詰め合わせセットA",
+            "color": "yellow",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "使うと2個宝珠を入手できる。",
+              "color": "gray",
+              "italic": false
+            },
+            {
+              "text": "  "
+            },
+            {
+              "text": "操作",
+              "color": "green",
+              "italic": false
+            },
+            {
+              "text": "[右クリック] - 使用",
+              "color": "green",
+              "italic": false
+            }
+          ],
+          "minecraft:item_model": "minecraft:chest",
+          "minecraft:consumable": {
+            "consume_seconds": 0,
+            "animation": "block",
+            "sound": "minecraft:intentionally_empty",
+            "has_consume_particles": false
+          }
+        }
+      },
+      "description": {
+        "text": "  ",
+        "extra": [
+          {
+            "text": "[購入]",
+            "italic": false,
+            "underlined": true,
+            "click_event": {
+              "action": "run_command",
+              "command": "trigger Znsi.Netshop set 2"
+            },
+            "hover_event": {
+              "action": "show_text",
+              "value": [
+                {
+                  "text": "[必要]\n",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "エメラルド1個",
+                  "color": "green",
+                  "italic": false
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "show_tooltip": true
+    }
+  ],
+  "inputs": [],
+  "can_close_with_escape": false,
+  "pause": false,
+  "after_action": "none",
+  "action": {
+    "label": {
+      "text": "閉じる"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger Znsi.QuickAction set -1"
+    }
+  }
+}

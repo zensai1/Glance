@@ -7,10 +7,18 @@
 
 
 ##キルログを表示
+    scoreboard players add @a[tag=Attacker] Znsi.Kill 1
     tellraw @a ["[",{"color":"dark_red","text":"KILL"},{"color":"white","text":"]  "},{"bold":true,"color":"white","selector":"@a[tag=Attacker]"},{"color":"white","text":"  ->  "},{"bold":true,"color":"white","selector":"@s"}]
     execute as @a at @s run playsound minecraft:entity.lightning_bolt.thunder record @s
 
 
+##順位反映
+    scoreboard players operation @s Znsi.Rank = *** Znsi.Rank
+    scoreboard players remove *** Znsi.Rank 1
+
 ##内部処理
+    particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force
+    title @s title {"color":"red","text":"You Died!"}
+    gamemode spectator @s
     execute on attacker run tag @s remove Attacker
     scoreboard players set @s Znsi.Deathcount 0
