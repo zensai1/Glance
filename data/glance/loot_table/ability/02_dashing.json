@@ -54,7 +54,41 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "右クリックで使用",
+                  "text": "「疾駆」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用すると移動速度が徐々に上昇する",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "10秒後に向いている方向に飛ぶことができる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP:2",
+                  "color": "green",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        "キー(弓)] - 疾駆発動"
+                      ]
+                    }
+                  ],
                   "color": "green",
                   "italic": false
                 }

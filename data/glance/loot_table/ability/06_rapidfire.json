@@ -54,7 +54,36 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "右クリックで使用",
+                  "text": "「速射」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用すると即座に矢を発射できる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP: 3",
+                  "color": "green",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        "キー(弓)] - 矢を発射"
+                      ]
+                    }
+                  ],
                   "color": "green",
                   "italic": false
                 }

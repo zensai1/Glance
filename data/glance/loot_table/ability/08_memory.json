@@ -54,7 +54,41 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "右クリックで使用",
+                  "text": "「記憶」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用すると記憶状態になる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "記憶状態の時に再度使用すると、最初に使った位置に戻る",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP: 5",
+                  "color": "green",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        "キー(弓)] - 記憶状態付与 / 巻き戻し(記憶状態時)"
+                      ]
+                    }
+                  ],
                   "color": "green",
                   "italic": false
                 }

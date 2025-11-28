@@ -9,8 +9,8 @@
 
 
 ##MPがなかったら中止
-    execute if score @s Znsi.MP matches ..3 run tellraw @s {"color":"red","text":"MPが足りない..."}
-    execute if score @s Znsi.MP matches ..3 run return 0
+    execute if score @s Znsi.MP matches ..2 run tellraw @s {"color":"red","text":"MPが足りない..."}
+    execute if score @s Znsi.MP matches ..2 run return 0
 
 
 ##抑制中だったら中止
@@ -36,4 +36,4 @@
 
 
 ##内部処理
-    scoreboard players remove @s Znsi.MP 4
+    scoreboard players remove @s Znsi.MP 3

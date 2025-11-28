@@ -54,7 +54,41 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "右クリックで使用",
+                  "text": "「偵察」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用するとドローンを召喚し、ドローンの視点に切り替わる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "20秒後プレイヤーの視点に戻る",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP: 4",
+                  "color": "green",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        "キー(弓)] - ドローン召喚"
+                      ]
+                    }
+                  ],
                   "color": "green",
                   "italic": false
                 }

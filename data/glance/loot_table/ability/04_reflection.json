@@ -54,7 +54,58 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "右クリックで使用",
+                  "text": "「反射」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用すると0.5秒間反射状態になる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "反射状態の時にダメージを食らうとダメージを無効化し",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "体力を",
+                  "extra": [
+                    {
+                      "text": "❤",
+                      "extra": [
+                        {
+                          "text": "1個分回復する",
+                          "color": "white"
+                        }
+                      ],
+                      "color": "red"
+                    }
+                  ],
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP: 3(反射失敗) / 1(反射成功)",
+                  "color": "green",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        "キー(弓)] - 反射状態に移行"
+                      ]
+                    }
+                  ],
                   "color": "green",
                   "italic": false
                 }

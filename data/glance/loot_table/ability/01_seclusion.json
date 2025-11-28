@@ -55,7 +55,43 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "右クリックで使用",
+                  "text": "「隠遁」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用すると20秒間透明化状態になり、ダメージも受けなくなる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "ただし透明化中は弓を使えなくなる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP:3",
+                  "color": "green",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        {
+                          "text": "キー(弓)] - 透明化"
+                        }
+                      ]
+                    }
+                  ],
                   "color": "green",
                   "italic": false
                 }

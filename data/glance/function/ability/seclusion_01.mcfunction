@@ -8,8 +8,8 @@
 
 
 ##MPがなかったら中止
-    execute if score @s Znsi.MP matches ..4 run tellraw @s {"color":"red","text":"MPが足りない..."}
-    execute if score @s Znsi.MP matches ..4 run return 0
+    execute if score @s Znsi.MP matches ..3 run tellraw @s {"color":"red","text":"MPが足りない..."}
+    execute if score @s Znsi.MP matches ..3 run return 0
 
 
 ##抑制中だったら中止

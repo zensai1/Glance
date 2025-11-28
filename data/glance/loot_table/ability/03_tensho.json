@@ -54,7 +54,46 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "右クリックで使用",
+                  "text": "「天翔」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用すると天翔を消費して向いてる方向に飛ぶ",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "天翔は時間経過で貯まる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "天翔が2.5未満の時は使用できない",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP:2",
+                  "color": "green",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        "キー(弓)] - 天翔発動"
+                      ]
+                    }
+                  ],
                   "color": "green",
                   "italic": false
                 }

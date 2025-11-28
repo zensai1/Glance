@@ -54,7 +54,41 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "右クリックで使用",
+                  "text": "「貫通」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "しゃがみながら矢を撃つと、その矢はブロックを貫通する",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "この矢は落下せずまっすぐ飛び、即着弾する",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP: 1",
+                  "color": "green",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.sneak",
+                      "extra": [
+                        "しながら射撃] - 貫通矢発射"
+                      ]
+                    }
+                  ],
                   "color": "green",
                   "italic": false
                 }
