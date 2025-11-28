@@ -1,0 +1,31 @@
+{
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/01_seclusion"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/03_tensho"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/05_penetration"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/08_memory"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/09_restraint"
+        }
+      ],
+      "functions": []
+    }
+  ],
+  "functions": []
+}

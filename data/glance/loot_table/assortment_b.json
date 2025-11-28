@@ -5,14 +5,14 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:potion",
+          "name": "minecraft:orange_dye",
           "functions": [
             {
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "text": "回復薬",
-                "color": "light_purple",
+                "text": "宝珠詰め合わせセットB",
+                "color": "yellow",
                 "italic": false
               },
               "target": "custom_name"
@@ -22,19 +22,7 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "飲むと",
-                  "extra": [
-                    {
-                      "text": "❤",
-                      "extra": [
-                        {
-                          "text": "1個分回復する",
-                          "color": "gray"
-                        }
-                      ],
-                      "color": "red"
-                    }
-                  ],
+                  "text": "使うと2個宝珠を入手できる。",
                   "color": "gray",
                   "italic": false
                 },
@@ -45,7 +33,7 @@
                   "italic": false
                 },
                 {
-                  "text": "[右クリック長押し] - 回復薬使用",
+                  "text": "[右クリック] - 使用",
                   "color": "green",
                   "italic": false
                 }
@@ -53,17 +41,14 @@
               "mode": "replace_all"
             },
             {
-              "function": "minecraft:toggle_tooltips",
-              "toggles": {
-                "minecraft:potion_contents": false
-              }
-            },
-            {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:potion_contents": {
-                  "potion": "minecraft:water",
-                  "custom_color": 15357241
+                "minecraft:item_model": "minecraft:chest",
+                "minecraft:consumable": {
+                  "consume_seconds": 0,
+                  "animation": "block",
+                  "sound": "minecraft:intentionally_empty",
+                  "has_consume_particles": false
                 }
               }
             }

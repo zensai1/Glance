@@ -1,0 +1,27 @@
+{
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/02_dashing"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/04_reflection"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/06_rapidfire"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/07_reconnaissance"
+        }
+      ],
+      "functions": []
+    }
+  ],
+  "functions": []
+}

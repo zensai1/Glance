@@ -16,7 +16,21 @@
           },
           "minecraft:lore": [
             {
-              "text": "飲むと♡1個分回復する",
+              "text": "飲むと",
+              "extra": [
+                {
+                  "text": "❤",
+                  "extra": [
+                    {
+                      "text": "1個分回復する",
+                      "color": "gray",
+                      "italic": false
+                    }
+                  ],
+                  "color": "red",
+                  "italic": false
+                }
+              ],
               "color": "gray",
               "italic": false
             },
@@ -133,6 +147,66 @@
                   "italic": false
                 }
               ]
+            }
+          }
+        ]
+      },
+      "show_tooltip": true
+    },
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:orange_dye",
+        "components": {
+          "minecraft:custom_name": {
+            "text": "宝珠詰め合わせセットB",
+            "color": "yellow",
+            "italic": false
+          },
+          "minecraft:lore": [
+            {
+              "text": "使うと2個宝珠を入手できる。",
+              "color": "gray"
+            },
+            "  ",
+            {
+              "text": "操作",
+              "color": "green",
+              "italic": false
+            },
+            {
+              "text": "[右クリック] - 使用",
+              "color": "green",
+              "italic": false
+            }
+          ],
+          "minecraft:item_model": "minecraft:chest",
+          "minecraft:consumable": {
+            "consume_seconds": 0,
+            "animation": "block",
+            "sound": "minecraft:intentionally_empty",
+            "has_consume_particles": false
+          }
+        }
+      },
+      "description": {
+        "text": "  ",
+        "extra": [
+          {
+            "text": "[購入]",
+            "italic": false,
+            "underlined": true,
+            "click_event": {
+              "action": "run_command",
+              "command": "trigger Znsi.Netshop set 3"
+            },
+            "hover_event": {
+              "action": "show_text",
+              "value": {
+                "text": "[必要]\nエメラルド1個",
+                "color": "green",
+                "italic": false
+              }
             }
           }
         ]

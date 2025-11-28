@@ -1,4 +1,4 @@
-#>glance:game/netshop/assortment_a
+#>glance:game/netshop/assortment_b
 #@execution -> glance:system/game
 
 
@@ -14,7 +14,7 @@
 
 
 ##アイテムを渡す
-    loot spawn ~ ~ ~ loot glance:assortment_a
+    loot spawn ~ ~ ~ loot glance:assortment_b
     playsound entity.item.pickup record @s
 
 

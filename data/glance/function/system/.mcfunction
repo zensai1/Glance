@@ -42,6 +42,8 @@
     scoreboard objectives add Znsi.Use.Bow used:bow
     scoreboard objectives add Znsi.Use.Echo_shard used:echo_shard
     scoreboard objectives add Znsi.Use.Potion used:potion
+    scoreboard objectives add Znsi.Use.White_Dye used:white_dye
+    scoreboard objectives add Znsi.Use.Orange_Dye used:orange_dye
 
     scoreboard objectives add Znsi.Drop.Glass dropped:black_stained_glass_pane
 

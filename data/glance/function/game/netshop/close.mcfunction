@@ -6,7 +6,7 @@
     scoreboard players reset @s Znsi.QuickAction
 
 
-##一個前のDialogを見せる
+##Dialog
     dialog clear @s
 
 

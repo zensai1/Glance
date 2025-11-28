@@ -155,6 +155,7 @@
 
     execute if entity @a[scores={Znsi.Netshop=1,Znsi.Page=200}] as @a[scores={Znsi.Netshop=1,Znsi.Page=200}] at @s run function glance:game/netshop/recovery_medicine
     execute if entity @a[scores={Znsi.Netshop=2,Znsi.Page=200}] as @a[scores={Znsi.Netshop=2,Znsi.Page=200}] at @s run function glance:game/netshop/assortment_a
+    execute if entity @a[scores={Znsi.Netshop=3,Znsi.Page=200}] as @a[scores={Znsi.Netshop=3,Znsi.Page=200}] at @s run function glance:game/netshop/assortment_b
 
     execute if entity @a[scores={Znsi.QuickAction=-1,Znsi.Page=200}] as @a[scores={Znsi.QuickAction=-1,Znsi.Page=200}] at @s run function glance:game/netshop/close
     execute if entity @a[scores={Znsi.Page=200},gamemode=spectator] as @a[scores={Znsi.Page=200},gamemode=spectator] at @s run function glance:game/netshop/close
@@ -173,3 +174,8 @@
 ##残り人数
     execute store result score *** Znsi.Remaining if entity @a[gamemode=adventure]
     execute if score *** Znsi.Remaining matches 1 run function glance:game/winner
+
+
+##アイテム
+    execute if entity @a[scores={Znsi.Use.White_Dye=1..}] as @a[scores={Znsi.Use.White_Dye=1..}] at @s run function glance:game/items/assortment_a
+    execute if entity @a[scores={Znsi.Use.Orange_Dye=1..}] as @a[scores={Znsi.Use.Orange_Dye=1..}] at @s run function glance:game/items/assortment_b

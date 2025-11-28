@@ -14,7 +14,7 @@
 
 
 ##アイテムを渡す
-    loot give @s loot glance:recovery_medicine
+    loot spawn ~ ~ ~ loot glance:recovery_medicine
     playsound entity.item.pickup record @s
 
 
