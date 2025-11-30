@@ -12,8 +12,8 @@
 
 
 ##return
-    execute if score @s Znsi.Emerald matches ..2 run tellraw @s {"color":"red","text":"エメラルドが不足しています"}
-    execute if score @s Znsi.Emerald matches ..2 run return 0
+    execute if score @s Znsi.Emerald matches ..1 run tellraw @s {"color":"red","text":"エメラルドが不足しています"}
+    execute if score @s Znsi.Emerald matches ..1 run return 0
     execute if score @s Znsi.Upgrade matches 0 run tellraw @s {"color":"red","text":"アップグレード回数が上限です"}
     execute if score @s Znsi.Upgrade matches 0 run return 0
     execute if score @s Znsi.MaxReload matches ..20 run tellraw @s {"color":"red","text":"これ以上は強化できません"}

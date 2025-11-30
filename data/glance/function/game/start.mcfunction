@@ -20,6 +20,7 @@
     scoreboard players set @a[gamemode=adventure] Znsi.Ability 0
     scoreboard players set @a[gamemode=adventure] Znsi.Hit 0
     scoreboard players set @a[gamemode=adventure] Znsi.Kill 0
+    scoreboard players set @a[gamemode=adventure] Znsi.Upgrade 5
     execute store result score *** Znsi.Rank if entity @a[gamemode=adventure]
     execute store result score *** Znsi.Temp if entity @a[gamemode=adventure]
 

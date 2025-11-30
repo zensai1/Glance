@@ -3,7 +3,8 @@
 
 
 ##抽選
-    loot give @s loot glance:items/assortment_a
+    loot spawn ~ ~ ~ loot glance:items/assortment_a
+    playsound minecraft:block.copper_chest.open record @s
 
 
 ##リセット

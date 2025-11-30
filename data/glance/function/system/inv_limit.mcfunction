@@ -28,5 +28,9 @@
     item replace entity @s inventory.17 with black_stained_glass_pane
 
 
+##弓を復活させる
+    loot replace entity @s hotbar.0 loot glance:bow
+
+
 ##内部処理
     scoreboard players reset @s Znsi.Drop.Glass

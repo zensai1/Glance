@@ -75,7 +75,7 @@
         "hover_event": {
           "action": "show_text",
           "value": {
-            "text": "[必要]\nエメラルド2個",
+            "text": "[必要]\nエメラルド3個",
             "color": "green",
             "italic": false
           }

@@ -33,7 +33,7 @@
   "actions": [\
     {\
       "label": {\
-        "text": "矢最大所持数増加"\
+        "text": "矢の最大所持数増加"\
       },\
       "action": {\
         "type": "minecraft:run_command",\
