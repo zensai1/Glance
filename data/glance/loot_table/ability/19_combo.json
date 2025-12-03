@@ -11,7 +11,7 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "text": "宝珠【貫通】",
+                "text": "宝珠【幸運】",
                 "color": "gold",
                 "italic": false
               }
@@ -30,11 +30,11 @@
                   "id": "minecraft:firework_star",
                   "components": {
                     "minecraft:custom_name": {
-                      "text": "宝珠【貫通】",
+                      "text": "宝珠【連撃】",
                       "color": "gold",
                       "italic": false
                     },
-                    "minecraft:custom_data": "{Ability:5b}",
+                    "minecraft:custom_data": "{Ability:19b}",
                     "minecraft:enchantments": {
                       "glance:ability": 1
                     },
@@ -54,41 +54,7 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "「貫通」の力が封じされた宝珠",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "text": "しゃがみながら矢を撃つと、その矢はブロックを貫通する",
-                  "color": "white",
-                  "italic": false
-                },
-                {
-                  "text": "この矢は落下せずまっすぐ飛び、即着弾する",
-                  "color": "white",
-                  "italic": false
-                },
-                {
-                  "text": "消費MP: 2",
-                  "color": "green",
-                  "italic": false
-                },
-                "  ",
-                {
-                  "text": "操作",
-                  "color": "green",
-                  "italic": false
-                },
-                {
-                  "text": "[",
-                  "extra": [
-                    {
-                      "keybind": "key.sneak",
-                      "extra": [
-                        "しながら射撃] - 貫通矢発射"
-                      ]
-                    }
-                  ],
+                  "text": "右クリックで使用",
                   "color": "green",
                   "italic": false
                 }

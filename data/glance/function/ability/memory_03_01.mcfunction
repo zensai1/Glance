@@ -13,4 +13,4 @@ playsound minecraft:block.vault.deactivate record @s
     tag @s remove Ability_Using
     scoreboard players set @s Znsi.Integer 0
     scoreboard players set @s Znsi.Decimal 0
-    scoreboard players remove @s Znsi.MP 5
+    scoreboard players remove @s Znsi.MP 3

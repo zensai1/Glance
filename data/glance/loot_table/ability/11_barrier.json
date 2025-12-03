@@ -30,7 +30,7 @@
                   "id": "minecraft:firework_star",
                   "components": {
                     "minecraft:custom_name": {
-                      "text": "宝珠【防壁】",
+                      "text": "宝珠【魔壁】",
                       "color": "gold",
                       "italic": false
                     },

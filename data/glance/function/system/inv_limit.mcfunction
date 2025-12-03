@@ -17,19 +17,20 @@
     item replace entity @s inventory.6 with black_stained_glass_pane
     item replace entity @s inventory.7 with black_stained_glass_pane
     item replace entity @s inventory.8 with black_stained_glass_pane
-    item replace entity @s inventory.9 with black_stained_glass_pane
-    item replace entity @s inventory.10 with black_stained_glass_pane
-    item replace entity @s inventory.11 with black_stained_glass_pane
-    item replace entity @s inventory.12 with black_stained_glass_pane
-    item replace entity @s inventory.13 with black_stained_glass_pane
-    item replace entity @s inventory.14 with black_stained_glass_pane
-    item replace entity @s inventory.15 with black_stained_glass_pane
-    item replace entity @s inventory.16 with black_stained_glass_pane
-    item replace entity @s inventory.17 with black_stained_glass_pane
+
+    execute unless score @s Znsi.Inv matches 1.. run item replace entity @s inventory.9 with black_stained_glass_pane
+    execute unless score @s Znsi.Inv matches 1.. run item replace entity @s inventory.10 with black_stained_glass_pane
+    execute unless score @s Znsi.Inv matches 2.. run item replace entity @s inventory.11 with black_stained_glass_pane
+    execute unless score @s Znsi.Inv matches 2.. run item replace entity @s inventory.12 with black_stained_glass_pane
+    execute unless score @s Znsi.Inv matches 3.. run item replace entity @s inventory.13 with black_stained_glass_pane
+    execute unless score @s Znsi.Inv matches 3.. run item replace entity @s inventory.14 with black_stained_glass_pane
+    execute unless score @s Znsi.Inv matches 4.. run item replace entity @s inventory.15 with black_stained_glass_pane
+    execute unless score @s Znsi.Inv matches 4.. run item replace entity @s inventory.16 with black_stained_glass_pane
+    execute unless score @s Znsi.Inv matches 4.. run item replace entity @s inventory.17 with black_stained_glass_pane
 
 
 ##弓を復活させる
-    loot replace entity @s hotbar.0 loot glance:bow
+    execute if score *** Znsi.Phase matches 1.. run loot replace entity @s hotbar.0 loot glance:bow
 
 
 ##内部処理

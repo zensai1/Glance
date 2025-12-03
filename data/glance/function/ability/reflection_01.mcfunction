@@ -24,5 +24,5 @@
 ##内部処理
     tag @s add Reflection
     tag @s add Ability_Using
-    scoreboard players set @s Znsi.Timer 10
+    scoreboard players set @s Znsi.Timer 15
     playsound block.anvil.use record @s ~ ~ ~ 1 1.5

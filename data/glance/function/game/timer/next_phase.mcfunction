@@ -9,6 +9,10 @@
     execute if score *** Znsi.Phase matches 0 run scoreboard players set @a[gamemode=adventure] Znsi.Reload 99
 
 
+##回復薬入手
+    loot give @a[gamemode=adventure] loot glance:recovery_medicine
+
+    
 ##Phaseを進める
     scoreboard players add *** Znsi.Phase 1
     execute as @a at @s run playsound minecraft:entity.player.levelup record @s

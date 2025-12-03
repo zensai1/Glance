@@ -7,7 +7,7 @@
     effect clear @s invisibility
     effect clear @s resistance
     attribute @s scale base reset
-    scoreboard players remove @s Znsi.MP 4
+    scoreboard players remove @s Znsi.MP 3
 
 
 ##乗ってるやつをkill
@@ -27,3 +27,8 @@
 
 ##Paste
     function glance:stp/put
+
+
+##
+    execute if entity @s[tag=Stare_Reward] run loot give @s loot glance:emerald
+    tag @s remove Stare_Reward

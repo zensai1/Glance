@@ -14,7 +14,7 @@
 
 ##スコアコピー
     scoreboard players operation @s Znsi.ID = @p Znsi.ID
-    scoreboard players set @s Znsi.Range 600
+    scoreboard players set @s Znsi.Range 300
 
 
 #test

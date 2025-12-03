@@ -24,6 +24,7 @@
 
 
 ##発動した座標を保存する
+    tp @s ~ ~0.5 ~
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Reconnaissance.X int 1 run data get entity @s Pos[0]
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Reconnaissance.Y int 1 run data get entity @s Pos[1]
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Reconnaissance.Z int 1 run data get entity @s Pos[2]
@@ -31,6 +32,7 @@
 
 ##偵察ドローンを召喚
     execute summon happy_ghast run function glance:ability/reconnaissance_02
+
 
 ##その他処理
     effect give @s invisibility 21 0 true 

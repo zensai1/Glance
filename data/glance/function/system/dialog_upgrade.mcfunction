@@ -1,32 +1,13 @@
-#glance:system/firstlogin
-#@execution -> glance:system/tick
-
-##必要な設定を行うよ
-    tag @s add firstlogin
-    scoreboard players add $Znsi.CoreID Znsi.CoreID 1
-    scoreboard players operation @s Znsi.ID = $Znsi.CoreID Znsi.CoreID
-    scoreboard players set @s Znsi.Ability 0
-    scoreboard players set @s Znsi.MP 5
-    scoreboard players set @s Znsi.MaxMP 5
-    scoreboard players set @s Znsi.MaxArrows 1
-    scoreboard players set @s Znsi.Timer 0
-    scoreboard players set @s Znsi.Integer 0
-    scoreboard players set @s Znsi.Decimal 0
-    scoreboard players set @s Znsi.Page 0
-
-    attribute @s max_health base set 6.0
-    attribute @s attack_damage base set 0
-
-    
-
-
-##メッセージを流すよ
-    tellraw @s {"color":"green","text":"Glance　現在のPatchは「1.01」です"}
-    tellraw @s [{"color":"green","text":"ルールなどは"},{"click_event":{"action":"open_url","url":"https://discord.gg/pFwAZDCXcY"},"color":"white","text":"こちら","underlined":true},{"color":"green","text":"から"}]
+#>glance:system/dialog_upgrade
+#@execution -> glance:system/leave
 
 
 ##OhMyDat呼び出し
     function #oh_my_dat:please
+
+
+##Dialog削除
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Dialog.Upgrade
 
 
 ##Dialogの一部を格納する

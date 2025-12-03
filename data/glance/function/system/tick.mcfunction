@@ -18,3 +18,8 @@
 ##矢のnbtを変更
     execute if entity @e[type=arrow] as @e[type=arrow] at @s run data modify entity @s PierceLevel set value 127b
     execute if entity @e[type=arrow] as @e[type=arrow] at @s run data modify entity @s crit set value 0b
+
+
+##退室検知
+    execute as @a[scores={Znsi.Leave=1..}] at @s run function glance:system/leave
+    

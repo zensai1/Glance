@@ -14,18 +14,20 @@
 
 ##スコアボード処理
     scoreboard players set *** Znsi.Phase 0
-    scoreboard players reset @a Znsi.Arrows
-    scoreboard players reset @a Znsi.Ability
     scoreboard players set @a Znsi.MaxArrows 1
     scoreboard players set @a Znsi.MaxMP 5
-    scoreboard players reset @a Znsi.Restraint
     scoreboard players set @a Znsi.MaxReload 100
+    scoreboard players set @a Znsi.Inv 0
+    scoreboard players reset @a Znsi.Restraint
+    scoreboard players reset @a Znsi.Arrows
+    scoreboard players reset @a Znsi.Ability
     scoreboard players reset @a Znsi.Phase
     scoreboard players reset @a Znsi.Reload
     scoreboard players reset @a Znsi.Upgrade
     scoreboard players reset @a Znsi.Rank
     scoreboard players reset @a Znsi.Kill
-    scoreboard players reset @s Znsi.Hit
+    scoreboard players reset @a Znsi.Hit
+    scoreboard players reset @a Znsi.Deathcount
 
 
 ##Tag処理
@@ -52,7 +54,13 @@
     clear @a
     effect clear @a
     effect give @a instant_health 10 240 true
+    kill @e[type=happy_ghast]
+    advancement revoke @a only glance:ekp
 
 
 ##サプライリセット
     execute as @e[type=interaction] at @s run data remove entity @s data.Player
+
+
+##GUI
+    execute as @a[tag=op] at @s run function glance:gui/

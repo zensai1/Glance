@@ -69,8 +69,8 @@
         execute as @a[tag=Dashing,scores={Znsi.20ticks=20..,Znsi.Ability=2}] at @s run function glance:ability/dashing_02
 
     ##天翔
-        execute as @a[scores={Znsi.Integer=..12,Znsi.Ability=3}] at @s run scoreboard players add @s Znsi.10ticks 1
-        execute as @a[scores={Znsi.10ticks=5..,Znsi.Ability=3}] at @s run function glance:ability/tensho_00
+        execute as @a[scores={Znsi.Integer=..4,Znsi.Ability=3}] at @s run scoreboard players add @s Znsi.10ticks 1
+        execute as @a[scores={Znsi.10ticks=10..,Znsi.Ability=3}] at @s run function glance:ability/tensho_00
         execute as @a at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 3 run function glance:ability/tensho_01
         
     ##反射
@@ -86,11 +86,19 @@
         execute as @a at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 6 run function glance:ability/rapidfire_01
 
     ##偵察
-        execute as @a at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 7 run function glance:ability/reconnaissance_01
+        execute as @a at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 7 store result storage glance: Ability.Recon int 1 run scoreboard players get @s Znsi.ID
+        execute as @a at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 7 run function glance:ability/reconnaissance_01 with storage glance: Ability
+        execute if entity @a[tag=Reconnaissance,predicate=glance:stare,tag=!Stare_Reward] as @a[tag=Reconnaissance,predicate=glance:stare,tag=!Stare_Reward] at @s run scoreboard players add @s Znsi.Stare 1
+        execute if entity @a[tag=Reconnaissance,predicate=!glance:stare,scores={Znsi.Stare=1..}] as @a[tag=Reconnaissance,predicate=!glance:stare,scores={Znsi.Stare=1..}] at @s run playsound minecraft:entity.creaking.deactivate record @s
+        execute if entity @a[tag=Reconnaissance,predicate=!glance:stare] as @a[tag=Reconnaissance,predicate=!glance:stare] at @s run scoreboard players set @s Znsi.Stare 0
+        execute if entity @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=1}] as @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=1}] at @s run playsound minecraft:entity.creaking.activate record @s
+        execute if entity @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] as @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] at @s run playsound minecraft:entity.allay.ambient_with_item record @s
+        execute if entity @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] as @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] at @s run tag @s add Stare_Reward
+        execute if entity @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] as @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] at @s run scoreboard players reset @s Znsi.Stare
         execute if entity @a[tag=Reconnaissance] as @a[tag=Reconnaissance] at @s run scoreboard players add @s Znsi.20ticks 1
         execute as @a[scores={Znsi.20ticks=20..,Znsi.Ability=7}] at @s run function glance:ability/reconnaissance_03
-        execute if entity @a[tag=Reconnaissance,predicate=!glance:reconnaissance] as @a[tag=Reconnaissance,predicate=!glance:reconnaissance] at @s store result storage glance: Ability.Reconnaissance.ID int 1 run scoreboard players get @s Znsi.ID
-        execute if entity @a[tag=Reconnaissance,predicate=!glance:reconnaissance] as @a[tag=Reconnaissance,predicate=!glance:reconnaissance] at @s run function glance:ability/reconnaissance_04 with storage glance: Ability.Reconnaissance
+        execute if entity @a[tag=Reconnaissance,predicate=!glance:reconnaissance] as @a[tag=Reconnaissance,predicate=!glance:reconnaissance] at @s run function #oh_my_dat:please
+        execute if entity @a[tag=Reconnaissance,predicate=!glance:reconnaissance] as @a[tag=Reconnaissance,predicate=!glance:reconnaissance] at @s run function glance:ability/reconnaissance_04 with storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Reconnaissance
 
     ##記憶
         execute as @a[tag=!Memory] at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 8 run function glance:ability/memory_01
@@ -101,7 +109,7 @@
 
     ##抑制
         execute as @a[tag=Restraint] at @s run scoreboard players add @s Znsi.Restraint 1
-        execute as @a[tag=Restraint] at @s if score @s Znsi.Restraint matches 100.. run function glance:ability/restraint_01
+        execute as @a[tag=Restraint] at @s if score @s Znsi.Restraint matches 200.. run function glance:ability/restraint_01
 
 
     ##速攻
@@ -142,6 +150,7 @@
     execute if entity @a[scores={Znsi.QuickAction=2,Znsi.Page=100}] as @a[scores={Znsi.QuickAction=2,Znsi.Page=100}] at @s run function glance:game/upgrade/reload
     execute if entity @a[scores={Znsi.QuickAction=3,Znsi.Page=100}] as @a[scores={Znsi.QuickAction=3,Znsi.Page=100}] at @s run function glance:game/upgrade/mp
     execute if entity @a[scores={Znsi.QuickAction=4,Znsi.Page=100}] as @a[scores={Znsi.QuickAction=4,Znsi.Page=100}] at @s run function glance:game/upgrade/mp_rec
+    execute if entity @a[scores={Znsi.QuickAction=5,Znsi.Page=100}] as @a[scores={Znsi.QuickAction=5,Znsi.Page=100}] at @s run function glance:game/upgrade/inventory
     execute if entity @a[tag=Upgrading] as @a[tag=Upgrading] at @s run scoreboard players remove @s Znsi.UpgradeTimer 1
     execute if entity @a[tag=Upgrading,scores={Znsi.UpgradeTimer=100}] as @a[tag=Upgrading,scores={Znsi.UpgradeTimer=100}] at @s run playsound minecraft:block.smithing_table.use record @s ~ ~ ~ 1
     execute if entity @a[tag=Upgrading,scores={Znsi.UpgradeTimer=80}] as @a[tag=Upgrading,scores={Znsi.UpgradeTimer=80}] at @s run playsound minecraft:block.smithing_table.use record @s ~ ~ ~ 1
@@ -162,6 +171,7 @@
 
 
 ##常時実行
+    execute as @a at @s run effect give @s weakness infinite 255 true
     execute as @a[gamemode=adventure] at @s run scoreboard players enable @s Znsi.QuickAction
     scoreboard players enable @a[gamemode=adventure] Znsi.Netshop
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:arrow"}}] as @e[type=item,nbt={Item:{id:"minecraft:arrow"}}] at @s run kill @s
@@ -169,12 +179,22 @@
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:black_stained_glass_pane"}}] as @e[type=item,nbt={Item:{id:"minecraft:black_stained_glass_pane"}}] at @s run kill @s
     execute as @a at @s if items entity @s player.cursor bow run loot replace entity @s hotbar.0 loot glance:bow
     execute as @a at @s if items entity @s player.cursor bow run item replace entity @s player.cursor with air
+    execute if entity @a[scores={Znsi.Drop.Bow=1..}] as @a[scores={Znsi.Drop.Bow=1..}] at @s run loot replace entity @s hotbar.0 loot glance:bow
+    execute if entity @a[scores={Znsi.Drop.Bow=1..}] as @a[scores={Znsi.Drop.Bow=1..}] at @s run scoreboard players reset @s Znsi.Drop.Bow
+    execute as @a at @s if items entity @s container.* potion[minecraft:potion_contents=water] run clear @s minecraft:potion[minecraft:potion_contents=water]
 
 
 ##残り人数
     execute store result score *** Znsi.Remaining if entity @a[gamemode=adventure]
     execute if score *** Znsi.Remaining matches 1 run function glance:game/winner
 
+
+##エリア死
+    execute if entity @a[scores={Znsi.Deathcount=1..}] as @a[scores={Znsi.Deathcount=1..}] at @s run function glance:game/area_death
+
+
+##フェーズ7
+    execute if score *** Znsi.Phase matches 7.. as @a[gamemode=adventure] at @s run damage @s 1.0 magic
 
 ##アイテム
     execute if entity @a[scores={Znsi.Use.White_Dye=1..}] as @a[scores={Znsi.Use.White_Dye=1..}] at @s run function glance:game/items/assortment_a

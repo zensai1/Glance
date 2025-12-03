@@ -22,6 +22,11 @@
     execute if entity @s[tag=Ability_Using] run return 0
 
 
+##矢を確認
+    execute if score @s Znsi.Arrows matches 0 run tellraw @s {"color":"red","text":"矢がありません"}
+    execute if score @s Znsi.Arrows matches 0 run return 0
+
+
 ##Motionを計算する
     execute store result storage glance: Ability.Rapidfire.Score int 1.0 run scoreboard players get @s Znsi.ID
     execute at @s summon marker run function glance:ability/rapidfire_02
@@ -33,6 +38,10 @@
 
 ##矢を発射
     function glance:ability/rapidfire_03 with storage glance: Ability.Rapidfire
+
+
+##矢を消す
+    clear @s arrow 1
 
 
 ##内部処理

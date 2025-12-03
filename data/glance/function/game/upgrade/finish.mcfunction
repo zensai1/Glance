@@ -15,6 +15,9 @@
 
     execute if entity @s[tag=UPGR_mp_rec] run scoreboard players remove @s Znsi.MaxMPRec 20
 
+    execute if entity @s[tag=UPGR_inv] run scoreboard players add @s Znsi.Inv 1
+    execute if entity @s[tag=UPGR_inv] run function glance:system/inv_limit
+
     scoreboard players remove @s Znsi.Upgrade 1
 
 ##Tagを消す
@@ -25,7 +28,12 @@
     tag @s remove UPGR_reload
 
     scoreboard players reset @s Znsi.UpgradeTimer
-    clear @s emerald 3
+
+##エメラルドをちょろまかしてたら制裁
+    execute store result score @s Znsi.Emerald if items entity @s container.* emerald
+    execute if score @s Znsi.Emerald matches ..1 run scoreboard players set @s Znsi.Upgrade 0
+    execute if score @s Znsi.Emerald matches ..1 run tellraw @s {"text":"不正な操作によりアップグレード回数を0にしました"}
+    clear @s emerald 2
 
 
 ##attributeも戻す

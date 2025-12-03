@@ -37,6 +37,10 @@
     scoreboard objectives add Znsi.Hit dummy "HIT数"
     scoreboard objectives add Znsi.Kill custom:player_kills "Kill数"
     scoreboard objectives add Znsi.Netshop trigger "ネットショップ"
+    scoreboard objectives add Znsi.Distance dummy "命中距離"
+    scoreboard objectives add Znsi.Leave custom:leave_game "退出"
+    scoreboard objectives add Znsi.Inv dummy "インベントリ強化"
+    scoreboard objectives add Znsi.Stare dummy "凝視"
     
 
     scoreboard objectives add Znsi.Use.Bow used:bow
@@ -46,12 +50,13 @@
     scoreboard objectives add Znsi.Use.Orange_Dye used:orange_dye
 
     scoreboard objectives add Znsi.Drop.Glass dropped:black_stained_glass_pane
+    scoreboard objectives add Znsi.Drop.Bow dropped:bow "弓を落としちゃった!"
 
     scoreboard players set *** Znsi.Timer 45
     scoreboard players set *** Znsi.Reload 100
     scoreboard players set *** Znsi.MaxArrows 1
     scoreboard players set *** Znsi.MaxMPRec 100
-    scoreboard players set *** Znsi.Upgrade 5
+    scoreboard players set *** Znsi.Upgrade 6
     scoreboard players set #2 Znsi.Health 2
 
 

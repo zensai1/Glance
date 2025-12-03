@@ -19,11 +19,17 @@
 ##当てたやつにエメラルドを渡す
     loot give @a[tag=Attacker,tag=!NotGive] loot glance:emerald
 
+
+##距離を測定
+    execute at @s positioned as @p[tag=Attacker] run function km_distance:as_to_at
+    function glance:system/calc
+
+
 ##HITログを流す
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 0.. run scoreboard players add @a[tag=Attacker] Znsi.Hit 1
-    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 0 run tellraw @a [{"text":"["},{"bold":false,"color":"red","text":"HIT"},"]  ",{"bold":true,"selector":"@a[tag=Attacker]"},{"text":"  ->  "},{"bold":true,"selector":"@a[tag=Znsi.Target]"}]
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 0 run tellraw @a [{"text":"["},{"bold":false,"color":"red","text":"HIT"},"]  ",{"bold":true,"selector":"@a[tag=Attacker]"},{"text":"  ->  "},{"bold":true,"selector":"@a[tag=Znsi.Target]"},{"color":"gray","text":"("},{"score":{"name":"#Integer","objective":"Znsi.Distance"},"color":"gray"},{"color":"gray","text":"."},{"score":{"name":"#Decimal","objective":"Znsi.Distance"},"color":"gray"},{"text":"m)","color":"gray"}]
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 0 as @a at @s run playsound entity.arrow.hit_player record @s
-    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run tellraw @a [{"text":"["},{"bold":false,"color":"dark_red","text":"KILL"},"]  ",{"bold":true,"selector":"@a[tag=Attacker]"},{"text":"  ->  "},{"bold":true,"selector":"@a[tag=Znsi.Target]"}]
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run tellraw @a [{"text":"["},{"bold":false,"color":"dark_red","text":"KILL"},"]  ",{"bold":true,"selector":"@a[tag=Attacker]"},{"text":"  ->  "},{"bold":true,"selector":"@a[tag=Znsi.Target]"},{"color":"gray","text":"("},{"score":{"name":"#Integer","objective":"Znsi.Distance"},"color":"gray"},{"color":"gray","text":"."},{"score":{"name":"#Decimal","objective":"Znsi.Distance"},"color":"gray"},{"text":"m)","color":"gray"}]
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 as @a at @s run playsound minecraft:entity.lightning_bolt.thunder record @s
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run gamemode spectator @s
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run scoreboard players add @a[tag=Attacker] Znsi.Kill 1
