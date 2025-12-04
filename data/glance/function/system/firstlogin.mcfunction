@@ -2,22 +2,22 @@
 #@execution -> glance:system/tick
 
 ##必要な設定を行うよ
-    tag @s add firstlogin
-    scoreboard players add $Znsi.CoreID Znsi.CoreID 1
-    scoreboard players operation @s Znsi.ID = $Znsi.CoreID Znsi.CoreID
-    scoreboard players set @s Znsi.Ability 0
-    scoreboard players set @s Znsi.MP 5
-    scoreboard players set @s Znsi.MaxMP 5
-    scoreboard players set @s Znsi.MaxArrows 1
-    scoreboard players set @s Znsi.Timer 0
-    scoreboard players set @s Znsi.Integer 0
-    scoreboard players set @s Znsi.Decimal 0
-    scoreboard players set @s Znsi.Page 0
+  tag @s add firstlogin
+  scoreboard players add $Znsi.CoreID Znsi.CoreID 1
+  scoreboard players operation @s Znsi.ID = $Znsi.CoreID Znsi.CoreID
+  scoreboard players set @s Znsi.Ability 0
+  scoreboard players set @s Znsi.MP 5
+  scoreboard players set @s Znsi.MaxMP 5
+  scoreboard players set @s Znsi.MaxArrows 1
+  scoreboard players set @s Znsi.Timer 0
+  scoreboard players set @s Znsi.Integer 0
+  scoreboard players set @s Znsi.Decimal 0
+  scoreboard players set @s Znsi.Page 0
 
-    attribute @s max_health base set 6.0
-    attribute @s attack_damage base set 0
-
-    
+  attribute @s max_health base set 6.0
+  attribute @s attack_damage base set 0
+  attribute @s minecraft:waypoint_transmit_range base set 0
+  attribute @s waypoint_receive_range base set 60000000.0
 
 
 ##メッセージを流すよ

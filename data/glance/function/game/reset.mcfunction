@@ -9,8 +9,8 @@
     data remove storage glance: game.State
     data modify storage glance: State set value "Standby"
     data remove storage glance: Phase.State
-    worldborder set 10000000
-
+    worldborder set 10000000 0
+    worldborder center 192.90 192.43
 
 ##スコアボード処理
     scoreboard players set *** Znsi.Phase 0
@@ -28,6 +28,7 @@
     scoreboard players reset @a Znsi.Kill
     scoreboard players reset @a Znsi.Hit
     scoreboard players reset @a Znsi.Deathcount
+    scoreboard players reset @a Znsi.UpgradeTimer
 
 
 ##Tag処理
@@ -38,6 +39,13 @@
     tag @a remove Reflection
     tag @a remove Seclusion
     tag @a remove Restraint
+    tag @a remove UPGR_inv
+    tag @a remove Upgrading
+    tag @a remove UPGR_arrow
+    tag @a remove UPGR_mp
+    tag @a remove UPGR_mp_rec
+    tag @a remove UPGR_reload
+
 
 
 ##attribute処理
@@ -64,3 +72,10 @@
 
 ##GUI
     execute as @a[tag=op] at @s run function glance:gui/
+
+
+##area
+    kill @e[tag=InArea]
+    kill @e[tag=Temp_Area]
+    kill @e[tag=Area_Center]
+    kill @e[tag=lottery_area]

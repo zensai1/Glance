@@ -18,3 +18,4 @@
 
 ##スコアリセット
     scoreboard players reset @s Znsi.Deathcount
+    tag @s remove Alive

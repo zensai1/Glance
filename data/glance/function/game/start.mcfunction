@@ -13,6 +13,7 @@
 
 ##プレイヤーに対して実行
     team join Player @a[gamemode=adventure]
+    tag @a[gamemode=adventure] add Alive
     loot replace entity @a[gamemode=adventure] armor.chest loot glance:flight
     effect give @a[gamemode=adventure] invisibility infinite 255 true
     execute as @a[gamemode=adventure] at @s run function glance:system/inv_limit
@@ -47,3 +48,6 @@
 ##TItle
     execute as @a at @s run title @s title {"bold":true,"color":"gold","text":"GAME START"}
     execute as @a at @s run playsound entity.wither.spawn record
+
+
+    function glance:system/area/

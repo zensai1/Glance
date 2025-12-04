@@ -13,7 +13,7 @@
 
 ##キルログを表示
     #scoreboard players add @a[tag=Attacker] Znsi.Kill 1
-    tellraw @a ["[",{"color":"dark_red","text":"KILL"},{"color":"white","text":"]  "},{"bold":true,"color":"white","selector":"@a[tag=Attacker]"},{"color":"white","text":"  ->  "},{"bold":true,"color":"white","selector":"@s"},{"color":"gray","text":" ("},{"score":{"name":"#Integer","objective":"Znsi.Distance"},"color":"gray"},{"color":"gray","text":"."},{"score":{"name":"#Decimal","objective":"Znsi.Distance"},"color":"gray"},{"text":"m)","color":"gray"}]
+    tellraw @a ["[",{"color":"dark_red","text":"KILL"},{"color":"white","text":"]  "},{"bold":true,"color":"white","selector":"@a[tag=Attacker]"},{"color":"white","text":"  ->  "},{"bold":true,"color":"dark_red","selector":"@s"},{"color":"gray","text":" ("},{"score":{"name":"#Integer","objective":"Znsi.Distance"},"color":"gray"},{"color":"gray","text":"."},{"score":{"name":"#Decimal","objective":"Znsi.Distance"},"color":"gray"},{"text":"m)","color":"gray"}]
     execute as @a at @s run playsound minecraft:entity.lightning_bolt.thunder record @s
 
 
@@ -25,5 +25,6 @@
     particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force
     title @s title {"color":"red","text":"You Died!"}
     gamemode spectator @s
+    tag @s remove Alive
     execute on attacker run tag @s remove Attacker
     scoreboard players set @s Znsi.Deathcount 0

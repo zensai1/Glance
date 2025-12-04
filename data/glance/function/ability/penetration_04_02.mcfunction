@@ -31,6 +31,7 @@
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 0 as @a at @s run playsound entity.arrow.hit_player record @s
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run tellraw @a [{"text":"["},{"bold":false,"color":"dark_red","text":"KILL"},"]  ",{"bold":true,"selector":"@a[tag=Attacker]"},{"text":"  ->  "},{"bold":true,"selector":"@a[tag=Znsi.Target]"},{"color":"gray","text":"("},{"score":{"name":"#Integer","objective":"Znsi.Distance"},"color":"gray"},{"color":"gray","text":"."},{"score":{"name":"#Decimal","objective":"Znsi.Distance"},"color":"gray"},{"text":"m)","color":"gray"}]
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 as @a at @s run playsound minecraft:entity.lightning_bolt.thunder record @s
+    execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run tag @s remove Alive
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run gamemode spectator @s
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run scoreboard players add @a[tag=Attacker] Znsi.Kill 1
     execute if entity @a[tag=Attacker,tag=!NotGive] if score @s Znsi.Deathcount matches 1 run particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force

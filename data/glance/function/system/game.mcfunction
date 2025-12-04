@@ -185,7 +185,7 @@
 
 
 ##残り人数
-    execute store result score *** Znsi.Remaining if entity @a[gamemode=adventure]
+    execute store result score *** Znsi.Remaining if entity @a[tag=Alive]
     execute if score *** Znsi.Remaining matches 1 run function glance:game/winner
 
 
@@ -199,3 +199,7 @@
 ##アイテム
     execute if entity @a[scores={Znsi.Use.White_Dye=1..}] as @a[scores={Znsi.Use.White_Dye=1..}] at @s run function glance:game/items/assortment_a
     execute if entity @a[scores={Znsi.Use.Orange_Dye=1..}] as @a[scores={Znsi.Use.Orange_Dye=1..}] at @s run function glance:game/items/assortment_b
+
+
+##エリア収縮
+    execute if data storage glance: Phase.State if entity @e[tag=Area_Center,scores={Znsi.Integer=1..}] as @e[tag=Area_Center,scores={Znsi.Integer=1..}] at @s run function glance:system/area/moving with storage glance: Area

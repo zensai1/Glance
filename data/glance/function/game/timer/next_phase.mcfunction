@@ -6,6 +6,7 @@
     execute if score *** Znsi.Phase matches 0 run effect clear @a[gamemode=adventure,tag=!Seclusion] resistance
     execute if score *** Znsi.Phase matches 0 run effect clear @a[gamemode=adventure,tag=!Seclusion] invisibility
     execute if score *** Znsi.Phase matches 0 run loot replace entity @a[gamemode=adventure] hotbar.0 loot glance:bow
+    execute if score *** Znsi.Phase matches 0 run item replace entity @a[gamemode=adventure] hotbar.7 with spyglass
     execute if score *** Znsi.Phase matches 0 run scoreboard players set @a[gamemode=adventure] Znsi.Reload 99
 
 

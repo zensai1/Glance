@@ -26,6 +26,7 @@
     tag @s remove UPGR_mp
     tag @s remove UPGR_mp_rec
     tag @s remove UPGR_reload
+    tag @s remove UPGR_inv
 
     scoreboard players reset @s Znsi.UpgradeTimer
 
