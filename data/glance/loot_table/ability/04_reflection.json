@@ -54,12 +54,17 @@
               "entity": "this",
               "lore": [
                 {
+                  "text": "右クリックで使用",
+                  "color": "green",
+                  "italic": false
+                },
+                {
                   "text": "「反射」の力が封じされた宝珠",
                   "color": "gray",
                   "italic": false
                 },
                 {
-                  "text": "使用すると0.5秒間反射状態になる",
+                  "text": "使用すると0.75秒間反射状態になる",
                   "color": "white",
                   "italic": false
                 },

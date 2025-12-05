@@ -57,6 +57,50 @@
                   "text": "右クリックで使用",
                   "color": "green",
                   "italic": false
+                },
+                {
+                  "text": "「速攻」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用すると20秒の間矢の最大所持数が1本増加する",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "更に移動速度が上昇する",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "20秒後少しの間視界が悪くなる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP: 4",
+                  "color": "green",
+                  "italic": false
+                },
+                " ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        "キー(弓)] - 速攻発動"
+                      ]
+                    }
+                  ],
+                  "color": "green",
+                  "italic": false
                 }
               ],
               "mode": "replace_all"

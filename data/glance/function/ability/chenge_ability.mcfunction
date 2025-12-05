@@ -13,7 +13,7 @@
     execute if items entity @s weapon.mainhand *[custom_data={Ability:8b}] if entity @s[tag=Ability_Using] run loot replace entity @s weapon.mainhand loot glance:ability/08_memory
     execute if items entity @s weapon.mainhand *[custom_data={Ability:9b}] if entity @s[tag=Ability_Using] run loot replace entity @s weapon.mainhand loot glance:ability/09_restraint
     execute if items entity @s weapon.mainhand *[custom_data={Ability:10b}] if entity @s[tag=Ability_Using] run loot replace entity @s weapon.mainhand loot glance:ability/10_haste
-    execute if items entity @s weapon.mainhand *[custom_data={Ability:11b}] if entity @s[tag=Ability_Using] run loot replace entity @s weapon.mainhand loot glance:ability/11_barrier
+    execute if items entity @s weapon.mainhand *[custom_data={Ability:11b}] if entity @s[tag=Ability_Using] run loot replace entity @s weapon.mainhand loot glance:ability/11_solid
     execute if items entity @s weapon.mainhand *[custom_data={Ability:12b}] if entity @s[tag=Ability_Using] run loot replace entity @s weapon.mainhand loot glance:ability/12_replacement
     execute if items entity @s weapon.mainhand *[custom_data={Ability:13b}] if entity @s[tag=Ability_Using] run loot replace entity @s weapon.mainhand loot glance:ability/13_robbery
     execute if items entity @s weapon.mainhand *[custom_data={Ability:14b}] if entity @s[tag=Ability_Using] run loot replace entity @s weapon.mainhand loot glance:ability/14_transparency
@@ -45,7 +45,7 @@
     execute if items entity @s weapon.mainhand *[custom_data={Ability:10b}] if entity @s[tag=!Ability_Using] run scoreboard players set @s Znsi.Ability 10
     execute if items entity @s weapon.mainhand *[custom_data={Ability:10b}] if entity @s[tag=!Ability_Using] run tellraw @s {"color":"green","text":"[Glance]　「速攻」の能力を使用します。"}
     execute if items entity @s weapon.mainhand *[custom_data={Ability:11b}] if entity @s[tag=!Ability_Using] run scoreboard players set @s Znsi.Ability 11
-    execute if items entity @s weapon.mainhand *[custom_data={Ability:11b}] if entity @s[tag=!Ability_Using] run tellraw @s {"color":"green","text":"[Glance]　「防壁」の能力を使用します。"}
+    execute if items entity @s weapon.mainhand *[custom_data={Ability:11b}] if entity @s[tag=!Ability_Using] run tellraw @s {"color":"green","text":"[Glance]　「堅固」の能力を使用します。"}
     execute if items entity @s weapon.mainhand *[custom_data={Ability:12b}] if entity @s[tag=!Ability_Using] run scoreboard players set @s Znsi.Ability 12
     execute if items entity @s weapon.mainhand *[custom_data={Ability:12b}] if entity @s[tag=!Ability_Using] run tellraw @s {"color":"green","text":"[Glance]　「入替」の能力を使用します。"}
     execute if items entity @s weapon.mainhand *[custom_data={Ability:13b}] if entity @s[tag=!Ability_Using] run scoreboard players set @s Znsi.Ability 13

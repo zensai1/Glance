@@ -11,7 +11,7 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "text": "宝珠【抑制】",
+                "text": "宝珠【堅固】",
                 "color": "gold",
                 "italic": false
               }
@@ -30,11 +30,11 @@
                   "id": "minecraft:firework_star",
                   "components": {
                     "minecraft:custom_name": {
-                      "text": "宝珠【抑制】",
+                      "text": "宝珠【魔壁】",
                       "color": "gold",
                       "italic": false
                     },
-                    "minecraft:custom_data": "{Ability:9b}",
+                    "minecraft:custom_data": "{Ability:11b}",
                     "minecraft:enchantments": {
                       "glance:ability": 1
                     },
@@ -55,37 +55,6 @@
               "lore": [
                 {
                   "text": "右クリックで使用",
-                  "color": "green",
-                  "italic": false
-                },
-                {
-                  "text": "「抑制」の力が封じされた宝珠",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "text": "矢を当てた時相手を10秒間抑制状態にする",
-                  "color": "white",
-                  "italic": false
-                },
-                {
-                  "text": "抑制状態中は異能を使用できない",
-                  "color": "white",
-                  "italic": false
-                },
-                {
-                  "text": "消費MP: 3",
-                  "color": "green",
-                  "italic": false
-                },
-                "  ",
-                {
-                  "text": "操作",
-                  "color": "green",
-                  "italic": false
-                },
-                {
-                  "text": "なし",
                   "color": "green",
                   "italic": false
                 }

@@ -7,7 +7,7 @@
     #say 進捗はく奪してるよ
 
 ##反撃
-    execute if entity @s[tag=Reflection] run function glance:ability/reflection_02_02
+    execute if entity @s[tag=Reflection] run function glance:ability/reflection/reflection_02_02
 
 
 ##能力使用中だったらエメラルドを上げない
