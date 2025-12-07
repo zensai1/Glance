@@ -29,7 +29,7 @@
     scoreboard players set @a[gamemode=adventure] Znsi.Kill 0
     scoreboard players set @a[gamemode=adventure] Znsi.Upgrade 6
     execute store result score *** Znsi.Rank if entity @a[gamemode=adventure]
-    execute store result score *** Znsi.Temp if entity @a[gamemode=adventure]
+    execute store result score #Rank Znsi.Temp if entity @a[gamemode=adventure]
 
 
 ##タイマーを動かす
@@ -48,6 +48,3 @@
 ##TItle
     execute as @a at @s run title @s title {"bold":true,"color":"gold","text":"GAME START"}
     execute as @a at @s run playsound entity.wither.spawn record
-
-
-    function glance:system/area/

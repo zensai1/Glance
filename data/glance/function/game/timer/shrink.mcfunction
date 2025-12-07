@@ -14,7 +14,7 @@
 
 
 ##収縮用
-    execute if score *** Znsi.Phase matches 1 positioned 192 85 192 run summon marker ~ ~ ~ {Tags:["Area_Center"]}
+    execute if score *** Znsi.Phase matches 1 positioned 192 36 192 run summon marker ~ ~ ~ {Tags:["Area_Center"]}
     execute if score *** Znsi.Phase matches 1 run scoreboard players set @e[tag=Area_Center] Znsi.Integer 600
 
 

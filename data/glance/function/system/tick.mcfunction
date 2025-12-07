@@ -12,12 +12,14 @@
 
 
 ##Stateだよ
+    function glance:system/ability
     execute if data storage glance: {State:"Standby"} run function glance:system/waiting
     execute if data storage glance: {State:"InGame"} run function glance:system/game with storage glance: Game.Info
 
 ##矢のnbtを変更
     execute if entity @e[type=arrow] as @e[type=arrow] at @s run data modify entity @s PierceLevel set value 127b
     execute if entity @e[type=arrow] as @e[type=arrow] at @s run data modify entity @s crit set value 0b
+    execute if entity @e[type=arrow] as @e[type=arrow] at @s run data modify entity @s pickup set value 0b
 
 
 ##退室検知

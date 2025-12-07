@@ -3,7 +3,7 @@
 
 
 ##Patch Log
-    tellraw @s {"color":"green","text":"Glance　現在のPatchは「β1.0.0」です"}
+    tellraw @s {"color":"green","text":"Glance　現在のPatchは「1.02」です"}
     tellraw @s [{"color":"green","text":"ルールなどは"},{"click_event":{"action":"open_url","url":"https://discord.gg/pFwAZDCXcY"},"color":"white","text":"こちら","underlined":true},{"color":"green","text":"から"}]
 
 

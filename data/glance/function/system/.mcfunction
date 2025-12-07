@@ -41,6 +41,7 @@
     scoreboard objectives add Znsi.Leave custom:leave_game "退出"
     scoreboard objectives add Znsi.Inv dummy "インベントリ強化"
     scoreboard objectives add Znsi.Stare dummy "凝視"
+    scoreboard objectives add Znsi.Absorption dummy "衝撃吸収"
     
 
     scoreboard objectives add Znsi.Use.Bow used:bow
@@ -74,7 +75,7 @@
     gamerule doDaylightCycle false
     gamerule doMobSpawning false
     gamerule doWeatherCycle false
-    gamerule locatorBar false
+    gamerule locatorBar true
     gamerule showDeathMessages false
     gamerule fallDamage false
     gamerule fireDamage false

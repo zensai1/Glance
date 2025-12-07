@@ -55,21 +55,6 @@
         "affected": "victim"
       }
     ],
-    "minecraft:hit_block": [
-      {
-        "requirements": {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "type": "minecraft:arrow"
-          }
-        },
-        "effect": {
-          "type": "minecraft:run_function",
-          "function": "glance:arrow/kill"
-        }
-      }
-    ],
     "minecraft:damage": [
       {
         "effect": {

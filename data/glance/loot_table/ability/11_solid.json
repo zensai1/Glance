@@ -30,7 +30,7 @@
                   "id": "minecraft:firework_star",
                   "components": {
                     "minecraft:custom_name": {
-                      "text": "宝珠【魔壁】",
+                      "text": "宝珠【堅固】",
                       "color": "gold",
                       "italic": false
                     },
@@ -55,6 +55,45 @@
               "lore": [
                 {
                   "text": "右クリックで使用",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "「堅固」の力が封じされた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用するとMPをすべて使って",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "使い捨ての体力を得る",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "消費MP:全部",
+                  "color": "green",
+                  "italic": false
+                },
+                "  ",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        "キー(弓)] - 堅固発動"
+                      ]
+                    }
+                  ],
                   "color": "green",
                   "italic": false
                 }

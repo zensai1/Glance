@@ -38,6 +38,14 @@
         {
           "type": "minecraft:loot_table",
           "value": "glance:ability/09_restraint"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/10_haste"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/11_solid"
         }
       ],
       "functions": []

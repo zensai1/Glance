@@ -3,6 +3,7 @@
 
 #say next_phase
 ##Phase0の時だけ
+    execute if score *** Znsi.Phase matches 0 run function glance:system/area/
     execute if score *** Znsi.Phase matches 0 run effect clear @a[gamemode=adventure,tag=!Seclusion] resistance
     execute if score *** Znsi.Phase matches 0 run effect clear @a[gamemode=adventure,tag=!Seclusion] invisibility
     execute if score *** Znsi.Phase matches 0 run loot replace entity @a[gamemode=adventure] hotbar.0 loot glance:bow

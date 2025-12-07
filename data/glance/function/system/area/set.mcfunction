@@ -26,6 +26,7 @@ say set
 
     tellraw @a ["MAPの中心～今回のエリア：",{"score":{"name":"#Area_Integer","objective":"Znsi.Distance"}},"m"]
 
+
 ##距離 / 縮小時間 = 秒速
     scoreboard players set #30 Znsi.Distance 30
     scoreboard players operation #Area_Integer Znsi.Distance /= #30 Znsi.Distance
@@ -45,6 +46,7 @@ say set
 
     tellraw @a ["1tick/1m：",{"score":{"name":"#Area_Integer","objective":"Znsi.Temp"}},{"score":{"name":"#Area_Integer","objective":"Znsi.Distance"}},"m"]
     execute store result storage glance: Area.Ticks double 0.1 run scoreboard players get #Area_Integer Znsi.Distance
+
 
 ##いったん計算した速度で動かしてみる
     execute positioned 192 36 192 run summon marker ~ ~ ~ {Tags:["Temp_Area"]}

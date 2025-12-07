@@ -15,4 +15,4 @@
 ##Rankを1加算
     scoreboard players add *** Znsi.Rank 1
     execute store result storage glance: Game.Rank int 1 run scoreboard players get *** Znsi.Rank
-    execute if score *** Znsi.Rank <= *** Znsi.Temp run function glance:game/rank with storage glance: Game
+    execute if score *** Znsi.Rank <= #Rank Znsi.Temp run function glance:game/rank with storage glance: Game

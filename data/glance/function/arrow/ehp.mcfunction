@@ -15,6 +15,17 @@
     execute if entity @s[tag=Reconnaissance] on attacker run tag @s add NotGive
 
 
+##衝撃吸収があるか
+    execute if data entity @s AbsorptionAmount store result score @s Znsi.Absorption run data get entity @s AbsorptionAmount
+    scoreboard players operation @s Znsi.Absorption %= #2 Znsi.Health
+    #tellraw @a ["奇数偶数:",{"score":{"name":"@s","objective":"Znsi.Absorption"}}]
+
+
+##衝撃吸収のダメージが奇数(1)だったら矢のダメージなのでreturnする
+    #execute if score @s Znsi.Absorption matches 1 run say 奇数だよ
+    execute if score @s Znsi.Absorption matches 1 run return 0
+
+
 ##矢のダメージかカスタムエンチャントのダメージか判定
     execute store result score @s Znsi.Health run data get entity @s Health
     scoreboard players operation @s Znsi.Health %= #2 Znsi.Health

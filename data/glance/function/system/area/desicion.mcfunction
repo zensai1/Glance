@@ -12,3 +12,7 @@
     tellraw @a ["今回の中心：",{"nbt":"Area.Pos.x","storage":"glance:"},",",{"nbt":"Area.Pos.y","storage":"glance:"},",",{"nbt":"Area.Pos.z","storage":"glance:"}]
     kill @s
     kill @e[type=marker,tag=InArea]
+
+
+##
+    execute store result score *** Znsi.Temp if entity @e[type=armor_stand,tag=lottery_area]

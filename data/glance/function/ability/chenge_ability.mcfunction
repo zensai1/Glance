@@ -70,3 +70,4 @@
     scoreboard players set @s Znsi.Decimal 0
     scoreboard players reset @s Znsi.20ticks
     scoreboard players reset @s Znsi.10ticks
+    attribute @s max_absorption base reset
