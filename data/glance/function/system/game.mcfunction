@@ -64,6 +64,10 @@
     execute as @a[scores={Znsi.Ability=11},tag=Restraint] at @s run title @s actionbar [{"strikethrough":true,"bold":true,"color":"gray","score":{"name":"@s","objective":"Znsi.MP"}},{"strikethrough":true,"bold":false,"color":"gray","text":" / "},{"strikethrough":true,"bold":false,"color":"gray","score":{"name":"@s","objective":"Znsi.MaxMP"}}]
 
 
+    execute as @a[scores={Znsi.Ability=12},tag=!Restraint] at @s run title @s actionbar [{"bold":true,"color":"green","score":{"name":"@s","objective":"Znsi.MP"}},{"bold":false,"color":"gray","text":" / "},{"bold":false,"color":"gray","score":{"name":"@s","objective":"Znsi.MaxMP"}}]
+    execute as @a[scores={Znsi.Ability=12},tag=Restraint] at @s run title @s actionbar [{"strikethrough":true,"bold":true,"color":"gray","score":{"name":"@s","objective":"Znsi.MP"}},{"strikethrough":true,"bold":false,"color":"gray","text":" / "},{"strikethrough":true,"bold":false,"color":"gray","score":{"name":"@s","objective":"Znsi.MaxMP"}}]
+
+
 ##MP関連    
     execute as @a at @s if score @s Znsi.MP < @s Znsi.MaxMP run scoreboard players add @s Znsi.MPRec 1
     execute as @a at @s if score @s Znsi.MPRec >= @s Znsi.MaxMPRec run scoreboard players add @s Znsi.MP 1
@@ -124,13 +128,18 @@
     execute as @a[gamemode=adventure] at @s run scoreboard players enable @s Znsi.QuickAction
     scoreboard players enable @a[gamemode=adventure] Znsi.Netshop
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:arrow"}}] as @e[type=item,nbt={Item:{id:"minecraft:arrow"}}] at @s run kill @s
+    execute if entity @e[type=item,nbt={Item:{id:"minecraft:spyglass"}}] as @e[type=item,nbt={Item:{id:"minecraft:spyglass"}}] at @s run kill @s
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:bow"}}] as @e[type=item,nbt={Item:{id:"minecraft:bow"}}] at @s run kill @s
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:barrier"}}] as @e[type=item,nbt={Item:{id:"minecraft:barrier"}}] at @s run kill @s
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:black_stained_glass_pane"}}] as @e[type=item,nbt={Item:{id:"minecraft:black_stained_glass_pane"}}] at @s run kill @s
     execute as @a at @s if items entity @s player.cursor bow run loot replace entity @s hotbar.0 loot glance:bow
     execute as @a at @s if items entity @s player.cursor bow run item replace entity @s player.cursor with air
+    execute as @a at @s if items entity @s player.cursor spyglass run item replace entity @s hotbar.7 with spyglass
+    execute as @a at @s if items entity @s player.cursor spyglass run item replace entity @s player.cursor with air
     execute if entity @a[scores={Znsi.Drop.Bow=1..}] as @a[scores={Znsi.Drop.Bow=1..}] at @s run loot replace entity @s hotbar.0 loot glance:bow
     execute if entity @a[scores={Znsi.Drop.Bow=1..}] as @a[scores={Znsi.Drop.Bow=1..}] at @s run scoreboard players reset @s Znsi.Drop.Bow
+    execute if entity @a[scores={Znsi.Drop.Spyglass=1..}] as @a[scores={Znsi.Drop.Spyglass=1..}] at @s run item replace entity @s hotbar.7 with spyglass
+    execute if entity @a[scores={Znsi.Drop.Spyglass=1..}] as @a[scores={Znsi.Drop.Spyglass=1..}] at @s run scoreboard players reset @s Znsi.Drop.Spyglass
     execute as @a at @s if items entity @s container.* potion[minecraft:potion_contents=water] run clear @s minecraft:potion[minecraft:potion_contents=water]
 
 

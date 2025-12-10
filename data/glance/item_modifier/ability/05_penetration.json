@@ -1,0 +1,54 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "text": "貫通",
+      "color": "white",
+      "italic": false
+    },
+    "target": "custom_name"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:item_model": "minecraft:crossbow"
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "消費MP: 2",
+        "color": "green",
+        "italic": false
+      },
+      {
+        "text": "スニークしながら矢を打つとブロックを無視して即着の矢を放つ。",
+        "color": "white",
+        "italic": false
+      },
+      "  ",
+      {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.sneak",
+                      "extra": [
+                        "しながら射撃] - 貫通の矢発射"
+                      ]
+                    }
+                  ],
+                  "color": "green",
+                  "italic": false
+                }
+    ],
+    "mode": "replace_all"
+  }
+]

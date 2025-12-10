@@ -57,6 +57,10 @@
     execute if entity @a[tag=Attacker,scores={Znsi.Ability=9,Znsi.MP=3..},tag=!Restraint] if entity @s[tag=!Restraint] run tag @s add Restraint
 
 
+##入替
+    execute if entity @a[tag=Attacker,scores={Znsi.Ability=12}] run scoreboard players operation @a[tag=Attacker,scores={Znsi.Ability=12}] Znsi.Replacement = @s Znsi.ID
+    
+
 ##命中ログを表示
     scoreboard players add @a[tag=Attacker] Znsi.Hit 1
     execute if entity @s[advancements={glance:ekp=false}] run tellraw @a ["[",{"color":"red","text":"HIT"},{"color":"white","text":"]  "},{"bold":true,"color":"white","selector":"@a[tag=Attacker]"},{"color":"white","text":"  ->  "},{"bold":true,"color":"white","selector":"@s"},{"color":"gray","text":" ("},{"score":{"name":"#Integer","objective":"Znsi.Distance"},"color":"gray"},{"color":"gray","text":"."},{"score":{"name":"#Decimal","objective":"Znsi.Distance"},"color":"gray"},{"text":"m)","color":"gray"}]

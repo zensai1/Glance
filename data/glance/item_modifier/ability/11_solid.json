@@ -1,0 +1,54 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "text": "堅固",
+      "color": "white",
+      "italic": false
+    },
+    "target": "custom_name"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:item_model": "minecraft:heavy_core"
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "消費MP: 全て",
+        "color": "green",
+        "italic": false
+      },
+      {
+        "text": "MPをすべて消費し、消費したMPに応じて使い捨ての体力を得る。",
+        "color": "white",
+        "italic": false
+      },
+      "  ",
+      {
+        "text": "操作",
+        "color": "green",
+        "italic": false
+      },
+      {
+        "text": "[",
+        "extra": [
+          {
+            "keybind": "key.swapOffhand",
+            "extra": [
+              "キー(弓)] - 堅固発動"
+            ]
+          }
+        ],
+        "color": "green",
+        "italic": false
+      }
+    ],
+    "mode": "replace_all"
+  }
+]

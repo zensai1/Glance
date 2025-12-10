@@ -34,7 +34,7 @@
                       "color": "gold",
                       "italic": false
                     },
-                    "minecraft:custom_data": "{Ability:1b}",
+                    "minecraft:custom_data": "{Ability:12b}",
                     "minecraft:enchantments": {
                       "glance:ability": 1
                     },

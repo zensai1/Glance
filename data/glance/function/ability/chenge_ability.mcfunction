@@ -71,3 +71,7 @@
     scoreboard players reset @s Znsi.20ticks
     scoreboard players reset @s Znsi.10ticks
     attribute @s max_absorption base reset
+
+
+##能力説明
+    function glance:system/inv_limit

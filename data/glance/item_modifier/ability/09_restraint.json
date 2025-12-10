@@ -1,0 +1,51 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "text": "抑制",
+      "color": "white",
+      "italic": false
+    },
+    "target": "custom_name"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:item_model": "minecraft:iron_chain"
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "消費MP: 3",
+        "color": "green",
+        "italic": false
+      },
+      {
+        "text": "矢を命中させると、10秒間抑制状態になる。",
+        "color": "white",
+        "italic": false
+      },
+      {
+        "text": "抑制状態の時、異能を使えない。",
+        "color": "white",
+        "italic": false
+       },
+      "  ",
+      {
+        "text": "操作",
+        "color": "green",
+        "italic": false
+      },
+      {
+        "text": "なし",
+        "color": "green",
+        "italic": false
+      }
+    ],
+    "mode": "replace_all"
+  }
+]

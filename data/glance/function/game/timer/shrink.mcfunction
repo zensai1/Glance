@@ -20,17 +20,18 @@
 
 ##エリア縮小
     execute if score *** Znsi.Phase matches 1 run worldborder set 350 30
-    execute if score *** Znsi.Phase matches 1 run worldborder damage buffer 20
+    execute if score *** Znsi.Phase matches 1 run worldborder damage buffer 40
+    execute if score *** Znsi.Phase matches 1 run worldborder damage amount 1
     execute if score *** Znsi.Phase matches 2 run worldborder set 250 30
-    execute if score *** Znsi.Phase matches 2 run worldborder damage buffer 10
+    execute if score *** Znsi.Phase matches 2 run worldborder damage buffer 20
     execute if score *** Znsi.Phase matches 3 run worldborder set 100 30
-    execute if score *** Znsi.Phase matches 3 run worldborder damage buffer 5
+    execute if score *** Znsi.Phase matches 3 run worldborder damage buffer 10
     execute if score *** Znsi.Phase matches 4 run worldborder set 50 30
-    execute if score *** Znsi.Phase matches 4 run worldborder damage buffer 3
+    execute if score *** Znsi.Phase matches 4 run worldborder damage buffer 5
     execute if score *** Znsi.Phase matches 5 run worldborder set 20 30
-    execute if score *** Znsi.Phase matches 5 run worldborder damage buffer 2
+    execute if score *** Znsi.Phase matches 5 run worldborder damage buffer 3
     execute if score *** Znsi.Phase matches 6 run worldborder set 1 30
-    execute if score *** Znsi.Phase matches 6 run worldborder damage buffer 1
+    execute if score *** Znsi.Phase matches 6 run worldborder damage buffer 0
 
 
 ##タイマー減らす

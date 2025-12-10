@@ -10,7 +10,7 @@
       "text": ""
     }
   },
-  "can_close_with_escape": false,
+  "can_close_with_escape": true,
   "exit_action": {
     "label": {
       "text": "閉じる"

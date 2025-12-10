@@ -23,6 +23,7 @@
 
 ##MPを衝撃吸収に
     scoreboard players operation @s Znsi.Absorption = @s Znsi.MP
+    scoreboard players operation @s Znsi.Absorption /= #2 Znsi.Health
 
 
 ##Storageに入れる

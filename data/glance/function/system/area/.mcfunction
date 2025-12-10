@@ -2,7 +2,7 @@
 #@execution -> glance:
 
 
-say area/
+#say area/
 ##以前のAreaタグ付きを消す
     kill @e[type=marker,tag=Area]
     kill @e[type=marker,tag=Center]

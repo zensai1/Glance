@@ -2,7 +2,7 @@
 #@execution -> glance:system/area/
 
 
-say set
+#say set
 ##今回のエリアの中心を決める
     spreadplayers 192 192 40 275 false @e[type=marker,tag=Area]
 
@@ -24,7 +24,7 @@ say set
     scoreboard players operation #TMP Znsi.Distance = #Area_Integer Znsi.Distance
     scoreboard players operation #TMP Znsi.Distance *= #100 Znsi.Distance
 
-    tellraw @a ["MAPの中心～今回のエリア：",{"score":{"name":"#Area_Integer","objective":"Znsi.Distance"}},"m"]
+    #tellraw @a ["MAPの中心～今回のエリア：",{"score":{"name":"#Area_Integer","objective":"Znsi.Distance"}},"m"]
 
 
 ##距離 / 縮小時間 = 秒速
@@ -44,7 +44,7 @@ say set
     scoreboard players operation #Area_Integer Znsi.Distance /= #20 Znsi.Distance
 
 
-    tellraw @a ["1tick/1m：",{"score":{"name":"#Area_Integer","objective":"Znsi.Temp"}},{"score":{"name":"#Area_Integer","objective":"Znsi.Distance"}},"m"]
+    #tellraw @a ["1tick/1m：",{"score":{"name":"#Area_Integer","objective":"Znsi.Temp"}},{"score":{"name":"#Area_Integer","objective":"Znsi.Distance"}},"m"]
     execute store result storage glance: Area.Ticks double 0.1 run scoreboard players get #Area_Integer Znsi.Distance
 
 

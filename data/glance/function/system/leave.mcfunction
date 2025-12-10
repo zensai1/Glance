@@ -3,6 +3,7 @@
 
 
 ##Patch Log
+    tellraw @a[tag=op] [{color:green,selector:"@s"},{text:"さんが入室しました"}]
     tellraw @s {"color":"green","text":"Glance　現在のPatchは「1.02」です"}
     tellraw @s [{"color":"green","text":"ルールなどは"},{"click_event":{"action":"open_url","url":"https://discord.gg/pFwAZDCXcY"},"color":"white","text":"こちら","underlined":true},{"color":"green","text":"から"}]
 
@@ -27,6 +28,7 @@
     scoreboard players reset @s Znsi.Deathcount
     scoreboard players reset @s Znsi.Leave
     scoreboard players reset @s Znsi.UpgradeTimer
+    scoreboard players reset @s Znsi.Replacement
 
 
 ##Tag処理
@@ -54,6 +56,7 @@
     effect clear @s
     effect give @s instant_health 10 240 true
     attribute @s attack_damage base set 0
+    attribute @s minecraft:attack_speed base set 1024
     attribute @s minecraft:waypoint_transmit_range base set 0
     attribute @s waypoint_receive_range base set 60000000.0
     execute if entity @s[tag=op] run function glance:gui/

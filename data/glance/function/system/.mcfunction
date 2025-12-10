@@ -42,6 +42,7 @@
     scoreboard objectives add Znsi.Inv dummy "インベントリ強化"
     scoreboard objectives add Znsi.Stare dummy "凝視"
     scoreboard objectives add Znsi.Absorption dummy "衝撃吸収"
+    scoreboard objectives add Znsi.Replacement dummy "入替"
     
 
     scoreboard objectives add Znsi.Use.Bow used:bow
@@ -52,6 +53,7 @@
 
     scoreboard objectives add Znsi.Drop.Glass dropped:black_stained_glass_pane
     scoreboard objectives add Znsi.Drop.Bow dropped:bow "弓を落としちゃった!"
+    scoreboard objectives add Znsi.Drop.Spyglass dropped:spyglass
 
     scoreboard players set *** Znsi.Timer 45
     scoreboard players set *** Znsi.Reload 100

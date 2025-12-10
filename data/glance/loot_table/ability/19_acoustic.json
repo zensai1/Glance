@@ -11,7 +11,7 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "text": "宝珠【幸運】",
+                "text": "宝珠【音響】",
                 "color": "gold",
                 "italic": false
               }
@@ -30,7 +30,7 @@
                   "id": "minecraft:firework_star",
                   "components": {
                     "minecraft:custom_name": {
-                      "text": "宝珠【連撃】",
+                      "text": "宝珠【音響】",
                       "color": "gold",
                       "italic": false
                     },

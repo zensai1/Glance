@@ -29,9 +29,11 @@
     scoreboard players reset @a Znsi.Hit
     scoreboard players reset @a Znsi.Deathcount
     scoreboard players reset @a Znsi.UpgradeTimer
+    scoreboard players reset @a Znsi.Replacement
 
 
 ##Tag処理
+    tag @a remove Alive
     tag @a remove Ability_Using
     tag @a remove Dashing
     tag @a remove Memory
@@ -50,6 +52,8 @@
 
 ##attribute処理
     execute as @a at @s run attribute @s scale base reset
+    execute as @a at @s run attribute @s movement_speed base reset
+    execute as @a at @s run attribute @s jump_strength base reset
 
 
 ##Bossbar
@@ -75,7 +79,10 @@
 
 
 ##area
+    kill @e[type=item]
     kill @e[tag=InArea]
     kill @e[tag=Temp_Area]
     kill @e[tag=Area_Center]
     kill @e[tag=lottery_area]
+    kill @e[type=arrow]
+    kill @e[type=marker]

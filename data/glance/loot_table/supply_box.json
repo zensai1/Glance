@@ -46,6 +46,10 @@
         {
           "type": "minecraft:loot_table",
           "value": "glance:ability/11_solid"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/12_replacement"
         }
       ],
       "functions": []

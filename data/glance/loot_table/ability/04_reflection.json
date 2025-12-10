@@ -11,7 +11,7 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "text": "宝珠【反射】",
+                "text": "宝珠【刹那】",
                 "color": "gold",
                 "italic": false
               }

@@ -18,7 +18,7 @@
 
 ##命中したかどうか
     #execute if entity @p[distance=..1.2] run function glance:ability/penetration_04_01
-    execute positioned ~-0.1 ~-0.1 ~-0.1 if entity @e[type=!ender_dragon,dx=0,sort=nearest,limit=1,gamemode=adventure] positioned ~-0.8 ~-0.8 ~-0.8 if entity @e[dx=0,sort=nearest,limit=1,gamemode=adventure] run function glance:ability/penetration_04_01
+    execute positioned ~-0.1 ~-0.1 ~-0.1 if entity @e[type=!ender_dragon,dx=0,sort=nearest,limit=1,gamemode=adventure] positioned ~-0.8 ~-0.8 ~-0.8 if entity @e[dx=0,sort=nearest,limit=1,gamemode=adventure] run function glance:ability/penetration/penetration_04_01
 
 
 

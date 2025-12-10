@@ -72,3 +72,9 @@
 
 ##堅固
     execute as @a at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 11 run function glance:ability/solid/solid_01
+
+
+##入替
+    execute as @a[predicate=!glance:sneak] at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 12 run function glance:ability/replacement/replacement_01 with entity @s
+    execute as @a[predicate=glance:sneak] at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 12 store result storage glance: Ability.Replacement int 1 run scoreboard players get @s Znsi.Replacement
+    execute as @a[predicate=glance:sneak] at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 12 run function glance:ability/replacement/replacement_02 with storage glance: Ability

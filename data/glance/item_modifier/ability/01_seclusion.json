@@ -1,0 +1,59 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "text": "隠遁",
+      "color": "white",
+      "italic": false
+    },
+    "target": "custom_name"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:item_model": "minecraft:glass_pane"
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "消費MP: 3",
+        "color": "green",
+        "italic": false
+      },
+      {
+        "text": "20秒間透明化状態になり、ダメージも受けなくなる。",
+        "color": "white",
+        "italic": false
+      },
+      {
+        "text": "透明化中は弓を使えなくなる。",
+        "color": "white",
+        "italic": false
+      },
+      "  ",
+      {
+        "text": "操作",
+        "color": "green",
+        "italic": false
+      },
+      {
+        "text": "[",
+        "extra": [
+          {
+            "keybind": "key.swapOffhand",
+            "extra": [
+              "キー(弓)] - 透明化"
+            ]
+          }
+        ],
+        "color": "green",
+        "italic": false
+      }
+    ],
+    "mode": "replace_all"
+  }
+]

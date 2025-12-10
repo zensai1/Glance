@@ -9,7 +9,15 @@
         },
         {
           "type": "minecraft:loot_table",
+          "value": "glance:ability/02_dashing"
+        },
+        {
+          "type": "minecraft:loot_table",
           "value": "glance:ability/03_tensho"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "glance:ability/04_reflection"
         },
         {
           "type": "minecraft:loot_table",
@@ -17,11 +25,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "glance:ability/08_memory"
-        },
-        {
-          "type": "minecraft:loot_table",
-          "value": "glance:ability/09_restraint"
+          "value": "glance:ability/06_rapidfire"
         }
       ],
       "functions": []
