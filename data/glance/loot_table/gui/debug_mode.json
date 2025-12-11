@@ -1,0 +1,27 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:end_crystal",
+          "conditions": [],
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "デバックモード",
+                "color": "light_purple",
+                "italic": false
+              },
+              "target": "item_name"
+            }
+          ]
+        }
+      ],
+      "functions": []
+    }
+  ]
+}

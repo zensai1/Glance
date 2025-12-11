@@ -50,10 +50,12 @@
     scoreboard objectives add Znsi.Use.Potion used:potion
     scoreboard objectives add Znsi.Use.White_Dye used:white_dye
     scoreboard objectives add Znsi.Use.Orange_Dye used:orange_dye
+    scoreboard objectives add Znsi.Use.Compass used:compass
+    
 
     scoreboard objectives add Znsi.Drop.Glass dropped:black_stained_glass_pane
     scoreboard objectives add Znsi.Drop.Bow dropped:bow "弓を落としちゃった!"
-    scoreboard objectives add Znsi.Drop.Spyglass dropped:spyglass
+    scoreboard objectives add Znsi.Drop.Compass dropped:compass
 
     scoreboard players set *** Znsi.Timer 45
     scoreboard players set *** Znsi.Reload 100

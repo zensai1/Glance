@@ -12,3 +12,4 @@
 ##GUI
     execute as @a[tag=op] at @s if items entity @s player.cursor bell run scoreboard players set *** Znsi.Emerald 11
     execute as @a[tag=op] at @s if items entity @s player.cursor bell run function glance:startcount/
+    execute as @a[tag=op] at @s if items entity @s player.cursor end_crystal run function glance:gui/page1/debug

@@ -38,13 +38,8 @@
 ##偵察
     execute as @a at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 7 store result storage glance: Ability.Recon int 1 run scoreboard players get @s Znsi.ID
     execute as @a at @s if items entity @s weapon.offhand bow if score @s Znsi.Ability matches 7 run function glance:ability/reconnaissance/reconnaissance_01 with storage glance: Ability
-    execute if entity @a[tag=Reconnaissance,predicate=glance:stare,tag=!Stare_Reward] as @a[tag=Reconnaissance,predicate=glance:stare,tag=!Stare_Reward] at @s run scoreboard players add @s Znsi.Stare 1
-    execute if entity @a[tag=Reconnaissance,predicate=!glance:stare,scores={Znsi.Stare=1..}] as @a[tag=Reconnaissance,predicate=!glance:stare,scores={Znsi.Stare=1..}] at @s run playsound minecraft:entity.creaking.deactivate record @s
-    execute if entity @a[tag=Reconnaissance,predicate=!glance:stare] as @a[tag=Reconnaissance,predicate=!glance:stare] at @s run scoreboard players set @s Znsi.Stare 0
-    execute if entity @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=1}] as @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=1}] at @s run playsound minecraft:entity.creaking.activate record @s
-    execute if entity @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] as @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] at @s run playsound minecraft:entity.allay.ambient_with_item record @s
-    execute if entity @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] as @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] at @s run tag @s add Stare_Reward
-    execute if entity @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] as @a[tag=Reconnaissance,predicate=glance:stare,scores={Znsi.Stare=100..}] at @s run scoreboard players reset @s Znsi.Stare
+    execute if entity @a[tag=Reconnaissance,predicate=glance:stare,tag=!Stare_Reward] as @a[tag=Reconnaissance,predicate=glance:stare,tag=!Stare_Reward] at @s run tag @s add Stare_Reward
+    execute if entity @a[tag=Reconnaissance,predicate=glance:stare,tag=!Stare_Reward] as @a[tag=Reconnaissance,predicate=glance:stare,tag=!Stare_Reward] at @s run playsound minecraft:entity.allay.ambient_with_item record @s
     execute if entity @a[tag=Reconnaissance] as @a[tag=Reconnaissance] at @s run scoreboard players add @s Znsi.20ticks 1
     execute as @a[scores={Znsi.20ticks=20..,Znsi.Ability=7}] at @s run function glance:ability/reconnaissance/reconnaissance_03
     execute if entity @a[tag=Reconnaissance,predicate=!glance:reconnaissance] as @a[tag=Reconnaissance,predicate=!glance:reconnaissance] at @s run function #oh_my_dat:please

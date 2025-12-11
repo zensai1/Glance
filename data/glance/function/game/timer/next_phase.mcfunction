@@ -7,8 +7,8 @@
     execute if score *** Znsi.Phase matches 0 run effect clear @a[gamemode=adventure,tag=!Seclusion] resistance
     execute if score *** Znsi.Phase matches 0 run effect clear @a[gamemode=adventure,tag=!Seclusion] invisibility
     execute if score *** Znsi.Phase matches 0 run loot replace entity @a[gamemode=adventure] hotbar.0 loot glance:bow
-    execute if score *** Znsi.Phase matches 0 run item replace entity @a[gamemode=adventure] hotbar.7 with spyglass
     execute if score *** Znsi.Phase matches 0 run scoreboard players set @a[gamemode=adventure] Znsi.Reload 99
+    
 
 
 ##回復薬入手
@@ -21,9 +21,15 @@
 
 
 ##Bossbar
-    scoreboard players set *** Znsi.Timer 120
-    bossbar set znsi.phase color blue
-    bossbar set znsi.phase max 120
+    execute if score *** Znsi.Phase matches 1..5 run say 1..5
+    execute if score *** Znsi.Phase matches 6 run say 6
+    execute if score *** Znsi.Phase matches 1..5 run scoreboard players set *** Znsi.Timer 120
+    execute if score *** Znsi.Phase matches 1..5 run bossbar set znsi.phase color blue
+    execute if score *** Znsi.Phase matches 1..5 run bossbar set znsi.phase max 120
+    execute if score *** Znsi.Phase matches 6 run scoreboard players set *** Znsi.Timer 20
+    execute if score *** Znsi.Phase matches 6 run bossbar set znsi.phase color red
+    execute if score *** Znsi.Phase matches 6 run bossbar set znsi.phase max 20
+
 
 
 ##Storage

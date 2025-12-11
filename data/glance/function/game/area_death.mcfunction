@@ -7,6 +7,7 @@
 
 
 ##死亡ログ
+    execute as @a at @s run playsound minecraft:entity.lightning_bolt.thunder record @s
     tellraw @a ["[",{"color":"dark_red","text":"DEATH"},{"color":"white","text":"]  "},{"bold":true,"color":"white","selector":"@s"},{"bold":true,"color":"gray","text":" (エリア外)"}]
 
 

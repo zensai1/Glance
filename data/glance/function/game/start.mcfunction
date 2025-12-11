@@ -36,7 +36,8 @@
     bossbar set znsi.phase players @a
     bossbar set znsi.phase visible true
     data modify storage glance: Phase.State set value Shrink
-    scoreboard players set *** Znsi.Timer 45
+    execute unless data storage glance: Debug run scoreboard players set *** Znsi.Timer 45
+    execute if data storage glance: Debug run scoreboard players set *** Znsi.Timer 1
     bossbar set znsi.phase max 45
     function glance:game/timer/
 

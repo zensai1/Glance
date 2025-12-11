@@ -127,30 +127,32 @@
     execute as @a at @s run effect give @s weakness infinite 255 true
     execute as @a[gamemode=adventure] at @s run scoreboard players enable @s Znsi.QuickAction
     scoreboard players enable @a[gamemode=adventure] Znsi.Netshop
+    execute as @a at @s if items entity @s player.cursor bow run loot replace entity @s hotbar.0 loot glance:bow
+    execute as @a at @s if items entity @s player.cursor bow run item replace entity @s player.cursor with air
+    execute as @a at @s if items entity @s weapon.offhand arrow run item replace entity @s weapon.offhand with air
+    execute if entity @a[scores={Znsi.Drop.Bow=1..}] as @a[scores={Znsi.Drop.Bow=1..}] at @s run loot replace entity @s hotbar.0 loot glance:bow
+    execute if entity @a[scores={Znsi.Drop.Bow=1..}] as @a[scores={Znsi.Drop.Bow=1..}] at @s run scoreboard players reset @s Znsi.Drop.Bow
+    execute as @a at @s if items entity @s container.* potion[minecraft:potion_contents=water] run clear @s minecraft:potion[minecraft:potion_contents=water]
+
+
+##アイテムエンティティをkill
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:arrow"}}] as @e[type=item,nbt={Item:{id:"minecraft:arrow"}}] at @s run kill @s
-    execute if entity @e[type=item,nbt={Item:{id:"minecraft:spyglass"}}] as @e[type=item,nbt={Item:{id:"minecraft:spyglass"}}] at @s run kill @s
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:bow"}}] as @e[type=item,nbt={Item:{id:"minecraft:bow"}}] at @s run kill @s
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:barrier"}}] as @e[type=item,nbt={Item:{id:"minecraft:barrier"}}] at @s run kill @s
     execute if entity @e[type=item,nbt={Item:{id:"minecraft:black_stained_glass_pane"}}] as @e[type=item,nbt={Item:{id:"minecraft:black_stained_glass_pane"}}] at @s run kill @s
-    execute as @a at @s if items entity @s player.cursor bow run loot replace entity @s hotbar.0 loot glance:bow
-    execute as @a at @s if items entity @s player.cursor bow run item replace entity @s player.cursor with air
-    execute as @a at @s if items entity @s player.cursor spyglass run item replace entity @s hotbar.7 with spyglass
-    execute as @a at @s if items entity @s player.cursor spyglass run item replace entity @s player.cursor with air
-    execute if entity @a[scores={Znsi.Drop.Bow=1..}] as @a[scores={Znsi.Drop.Bow=1..}] at @s run loot replace entity @s hotbar.0 loot glance:bow
-    execute if entity @a[scores={Znsi.Drop.Bow=1..}] as @a[scores={Znsi.Drop.Bow=1..}] at @s run scoreboard players reset @s Znsi.Drop.Bow
-    execute if entity @a[scores={Znsi.Drop.Spyglass=1..}] as @a[scores={Znsi.Drop.Spyglass=1..}] at @s run item replace entity @s hotbar.7 with spyglass
-    execute if entity @a[scores={Znsi.Drop.Spyglass=1..}] as @a[scores={Znsi.Drop.Spyglass=1..}] at @s run scoreboard players reset @s Znsi.Drop.Spyglass
-    execute as @a at @s if items entity @s container.* potion[minecraft:potion_contents=water] run clear @s minecraft:potion[minecraft:potion_contents=water]
 
 
 ##残り人数
     execute store result score *** Znsi.Remaining if entity @a[tag=Alive]
-    execute if score *** Znsi.Remaining matches 1 run function glance:game/winner
+    execute if score *** Znsi.Remaining matches 1 unless data storage glance: Debug run function glance:game/winner
 
 
 ##エリア死
     execute if entity @a[scores={Znsi.Deathcount=1..}] as @a[scores={Znsi.Deathcount=1..}] at @s run function glance:game/area_death
 
+
+##えりあこんぱす    
+    execute if entity @a[scores={Znsi.Use.Compass=1..}] as @a[scores={Znsi.Use.Compass=1..}] at @s run function glance:system/area/judgement with storage glance: Area.Pos
 
 ##フェーズ7
     execute if score *** Znsi.Phase matches 7.. as @a[gamemode=adventure] at @s run damage @s 0.5 magic

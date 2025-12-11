@@ -9,9 +9,12 @@
 
 
 ##ボスバーを変更する
-    execute unless data storage glance: Phase.State run bossbar set znsi.phase name ["フェーズ",{"score":{"name":"***","objective":"Znsi.Phase"}},"　|　エリア縮小まで後",{"score":{"name":"***","objective":"Znsi.Timer"}},"秒"]
+    execute unless data storage glance: Phase.State if score *** Znsi.Phase matches 1..5 run bossbar set znsi.phase name ["フェーズ",{"score":{"name":"***","objective":"Znsi.Phase"}},"　|　エリア縮小まで後",{"score":{"name":"***","objective":"Znsi.Timer"}},"秒"]
+    execute unless data storage glance: Phase.State if score *** Znsi.Phase matches 6 run bossbar set znsi.phase name ["最終フェーズまで後",{"score":{"name":"***","objective":"Znsi.Timer"}},"秒"]
+
     execute if data storage glance: Phase.State if score *** Znsi.Phase matches 0 run bossbar set znsi.phase name ["フェーズ",{"score":{"name":"***","objective":"Znsi.Phase"}},"　|　次のフェーズまで後",{"score":{"name":"***","objective":"Znsi.Timer"}},"秒"]
-    execute if data storage glance: Phase.State if score *** Znsi.Phase matches 1.. run bossbar set znsi.phase name ["フェーズ",{"score":{"name":"***","objective":"Znsi.Phase"}},"　|　次のフェーズまで後",{"score":{"name":"***","objective":"Znsi.Timer"}},"秒"]
+    execute if data storage glance: Phase.State if score *** Znsi.Phase matches 1..5 run bossbar set znsi.phase name ["フェーズ",{"score":{"name":"***","objective":"Znsi.Phase"}},"　|　次のフェーズまで後",{"score":{"name":"***","objective":"Znsi.Timer"}},"秒"]
+    execute if data storage glance: Phase.State if score *** Znsi.Phase matches 6 run bossbar set znsi.phase name [{text:"最終フェーズ進行中",color:white}]
 
 
 ##1秒以上だったら再帰する

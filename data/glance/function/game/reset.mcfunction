@@ -86,3 +86,7 @@
     kill @e[tag=lottery_area]
     kill @e[type=arrow]
     kill @e[type=marker]
+
+
+##Settingとか
+    data remove storage glance: Debug
