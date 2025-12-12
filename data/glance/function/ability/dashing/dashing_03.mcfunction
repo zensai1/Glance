@@ -13,4 +13,4 @@
     effect clear @s speed
     scoreboard players set @s Znsi.Integer 0
     scoreboard players set @s Znsi.Decimal 0
-    scoreboard players remove @s Znsi.MP 2
+    scoreboard players remove @s Znsi.MP 3

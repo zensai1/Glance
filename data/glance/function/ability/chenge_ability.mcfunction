@@ -63,6 +63,10 @@
     playsound minecraft:entity.player.levelup record @s
 
 
+##抑制TAGを外す
+    execute if entity @s[tag=Restraint] run function glance:ability/restraint/restraint_01
+
+
 ##前の能力のいろいろは削除
     tag @s remove Dashing
     effect clear @s speed

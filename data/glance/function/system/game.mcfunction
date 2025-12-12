@@ -163,4 +163,5 @@
 
 
 ##エリア収縮
-    execute if data storage glance: Phase.State if entity @e[tag=Area_Center,scores={Znsi.Integer=1..}] as @e[tag=Area_Center,scores={Znsi.Integer=1..}] at @s run function glance:system/area/moving with storage glance: Area
+    execute if data storage glance: {Phase:{State:Shrink}} if entity @e[tag=Area_Center,scores={Znsi.Integer=1..}] as @e[tag=Area_Center,scores={Znsi.Integer=1..}] at @s run function glance:system/area/moving with storage glance: Area
+    execute if data storage glance: {Phase:{State:FinalPhase}} if entity @e[tag=lottery_area,scores={Znsi.Distance=1..}] as @e[tag=lottery_area,scores={Znsi.Distance=1..}] at @s run function glance:system/area/final

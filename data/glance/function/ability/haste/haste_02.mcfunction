@@ -16,4 +16,5 @@
 ##小数が1以上だったら小数を1減少
     execute if score @s Znsi.Decimal matches 1.. run scoreboard players remove @s Znsi.Decimal 1
 
-    execute if score @s Znsi.Decimal matches 0 if score @s Znsi.Integer matches 0 run function glance:ability/haste/haste_03
+    execute if score @s Znsi.Decimal matches 0 if score @s Znsi.Integer matches 0 run function #oh_my_dat:please
+    execute if score @s Znsi.Decimal matches 0 if score @s Znsi.Integer matches 0 run function glance:ability/haste/haste_03 with storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Haste

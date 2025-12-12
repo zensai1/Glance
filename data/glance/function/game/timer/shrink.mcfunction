@@ -10,7 +10,8 @@
 
 
 ##storage変更
-    data modify storage glance: Phase.State set value Shrink
+    execute if score *** Znsi.Phase matches 1..5 run data modify storage glance: Phase.State set value Shrink
+    execute if score *** Znsi.Phase matches 6 run data modify storage glance: Phase.State set value FinalPhase
 
 
 ##収縮用
@@ -32,8 +33,8 @@
     execute if score *** Znsi.Phase matches 4 run worldborder damage buffer 5
     execute if score *** Znsi.Phase matches 5 run worldborder set 20 30
     execute if score *** Znsi.Phase matches 5 run worldborder damage buffer 3
-    execute if score *** Znsi.Phase matches 6 run say 最終フェーズ
+    execute if score *** Znsi.Phase matches 6 run function glance:game/timer/final
 
 
 ##タイマー減らす
-    function glance:game/timer/
+    execute if score *** Znsi.Phase matches 1..5 run function glance:game/timer/

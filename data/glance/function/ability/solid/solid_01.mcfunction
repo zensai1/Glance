@@ -26,6 +26,12 @@
     scoreboard players operation @s Znsi.Absorption /= #2 Znsi.Health
 
 
+##端数があるかどうか
+    scoreboard players operation #TEMP Znsi.Absorption = @s Znsi.Absorption
+    scoreboard players operation #TEMP Znsi.Absorption %= #2 Znsi.Health
+    execute if score #TEMP Znsi.Absorption matches 1 run scoreboard players remove @s Znsi.Absorption 1
+
+
 ##Storageに入れる
     execute store result storage glance: Ability.Solid int 1 run scoreboard players get @s Znsi.Absorption
 

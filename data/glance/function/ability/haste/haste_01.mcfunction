@@ -21,10 +21,24 @@
     execute if entity @s[tag=Ability_Using] run return 0
 
 
+#OhMyDat召喚!
+    function #oh_my_dat:please
+
+
+##矢の所持数を一時的に増やす
+    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Haste.Arrows int 1 run scoreboard players get @s Znsi.MaxArrows
+    scoreboard players add @s Znsi.MaxArrows 2
+
+
+##リロード速度を一時的に早く
+    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Haste.Reload int 1 run scoreboard players get @s Znsi.MaxReload
+    scoreboard players set @s Znsi.Reload 0
+    scoreboard players set @s Znsi.MaxReload 40
+
+
 ##内部処理
     tag @s add Haste
     tag @s add Ability_Using
     scoreboard players set @s Znsi.Integer 2
     scoreboard players set @s Znsi.Decimal 0
-    scoreboard players add @s Znsi.MaxArrows 1
     effect give @s speed 21 1 true

@@ -6,6 +6,10 @@
     execute on attacker run tag @s add Attacker
 
 
+##速攻
+    execute if entity @a[tag=Attacker,tag=Haste] run tag @a[tag=Attacker,tag=Haste] add Haste_Kill
+
+
 ##距離を測定
     execute at @s positioned as @p[tag=Attacker] run function km_distance:as_to_at
     function glance:system/calc
