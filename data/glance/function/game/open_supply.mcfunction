@@ -13,7 +13,7 @@
 ##初回の処理
     $data modify entity @s data.uuid set value $(UUID)
     data modify entity @s data.Player append from entity @s data.uuid
-    loot spawn ~ ~1 ~ loot glance:supply_box
+    function glance:game/loot with storage glance: LootTable
     execute on target run tag @s add Supply_Open
     execute as @a[tag=Supply_Open] at @s run playsound minecraft:block.vault.reject_rewarded_player record @s
     execute on target run tag @s remove Supply_Open 

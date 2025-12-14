@@ -21,8 +21,8 @@
 
 
 ##メッセージを流すよ
-    tellraw @s {"color":"green","text":"Glance　現在のPatchは「1.01」です"}
-    tellraw @s [{"color":"green","text":"ルールなどは"},{"click_event":{"action":"open_url","url":"https://discord.gg/pFwAZDCXcY"},"color":"white","text":"こちら","underlined":true},{"color":"green","text":"から"}]
+    tellraw @s {"color":"green","text":"Glance　現在のPatchは「2.00」です"}
+    #tellraw @s [{"color":"green","text":"ルールなどは"},{"click_event":{"action":"open_url","url":"https://discord.gg/pFwAZDCXcY"},"color":"white","text":"こちら","underlined":true},{"color":"green","text":"から"}]
 
 
 ##OhMyDat呼び出し

@@ -49,3 +49,31 @@
 ##TItle
     execute as @a at @s run title @s title {"bold":true,"color":"gold","text":"GAME START"}
     execute as @a at @s run playsound entity.wither.spawn record
+
+
+##異能抽選
+    data modify storage glance: LootTable.Supply set value {\
+  "pools": [\
+    {\
+      "rolls": 1,\
+      "entries": [],\
+      "functions": []\
+    },\
+    {\
+      "rolls": 1,\
+      "entries": [\
+        {\
+          "type": "minecraft:loot_table",\
+          "value": "glance:recovery_medicine"\
+        }\
+      ]\
+    }\
+  ],\
+  "functions": []\
+}
+
+    scoreboard players set #Ability_Num Znsi.Ability 5
+    function glance:game/lottery/pre
+    function glance:game/lottery/
+
+    tellraw @a [{"color":"green","text":"今回出現する異能は"},{"color":"green","interpret":true,"nbt":"Ability.Pool[]","storage":"glance:"},{text:"です"}]

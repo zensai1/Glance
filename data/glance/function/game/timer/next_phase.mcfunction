@@ -21,8 +21,6 @@
 
 
 ##Bossbar
-    execute if score *** Znsi.Phase matches 1..5 run say 1..5
-    execute if score *** Znsi.Phase matches 6 run say 6
     execute if score *** Znsi.Phase matches 1..5 run scoreboard players set *** Znsi.Timer 120
     execute if score *** Znsi.Phase matches 1..5 run bossbar set znsi.phase color blue
     execute if score *** Znsi.Phase matches 1..5 run bossbar set znsi.phase max 120

@@ -31,7 +31,7 @@
     execute if items entity @s weapon.mainhand *[custom_data={Ability:3b}] if entity @s[tag=!Ability_Using] run scoreboard players set @s Znsi.Ability 3
     execute if items entity @s weapon.mainhand *[custom_data={Ability:3b}] if entity @s[tag=!Ability_Using] run tellraw @s {"color":"green","text":"[Glance]　「天翔」の能力を使用します。"}
     execute if items entity @s weapon.mainhand *[custom_data={Ability:4b}] if entity @s[tag=!Ability_Using] run scoreboard players set @s Znsi.Ability 4
-    execute if items entity @s weapon.mainhand *[custom_data={Ability:4b}] if entity @s[tag=!Ability_Using] run tellraw @s {"color":"green","text":"[Glance]　「反射」の能力を使用します。"}
+    execute if items entity @s weapon.mainhand *[custom_data={Ability:4b}] if entity @s[tag=!Ability_Using] run tellraw @s {"color":"green","text":"[Glance]　「刹那」の能力を使用します。"}
     execute if items entity @s weapon.mainhand *[custom_data={Ability:5b}] if entity @s[tag=!Ability_Using] run scoreboard players set @s Znsi.Ability 5
     execute if items entity @s weapon.mainhand *[custom_data={Ability:5b}] if entity @s[tag=!Ability_Using] run tellraw @s {"color":"green","text":"[Glance]　「貫通」の能力を使用します。"}
     execute if items entity @s weapon.mainhand *[custom_data={Ability:6b}] if entity @s[tag=!Ability_Using] run scoreboard players set @s Znsi.Ability 6

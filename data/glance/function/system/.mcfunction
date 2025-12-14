@@ -88,6 +88,11 @@
 
 ##Storage
     data modify storage glance: State set value "Standby"
+    data modify storage glance: Ability.Name set value ["隠遁","疾駆","天翔","刹那","貫通","速射","偵察","記憶","抑制","速攻","堅固","入替"]
+    data modify storage glance: Num set value [0,1,2,3,4,5,6,7,8,9,10]
+    data remove storage glance: Result
+    data remove storage glance: Ability.Pool
+    data remove storage glance: Pool
 
 
 ##Team

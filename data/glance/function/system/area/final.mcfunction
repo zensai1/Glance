@@ -3,7 +3,7 @@
 
 
 ##前に進む
-    execute if entity @s[scores={Znsi.Distance=1..}] run tp @s ^ ^ ^0.25 ~ ~
+    execute if entity @s[scores={Znsi.Distance=1..}] run tp @s ^ ^ ^0.15 ~ ~
 
 
 ##スコア減少

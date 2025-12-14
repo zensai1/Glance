@@ -5,10 +5,17 @@
     schedule clear glance:game/timer/
 
 
-##全体処理
+##Storage
     data remove storage glance: game.State
     data modify storage glance: State set value "Standby"
+    data remove storage glance: LootTable.Supply
     data remove storage glance: Phase.State
+    data remove storage glance: Result
+    data remove storage glance: Ability.Pool
+    data remove storage glance: Pool
+
+
+##全体処理
     worldborder set 10000000 0
     worldborder center 192.90 192.43
 

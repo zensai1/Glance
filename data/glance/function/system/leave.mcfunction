@@ -4,11 +4,12 @@
 
 ##Patch Log
     tellraw @a[tag=op] [{color:green,selector:"@s"},{text:"さんが入室しました"}]
-    tellraw @s {"color":"green","text":"Glance　現在のPatchは「1.02」です"}
-    tellraw @s [{"color":"green","text":"ルールなどは"},{"click_event":{"action":"open_url","url":"https://discord.gg/pFwAZDCXcY"},"color":"white","text":"こちら","underlined":true},{"color":"green","text":"から"}]
+    tellraw @s {"color":"green","text":"Glance　現在のPatchは「2.00」です"}
+    #tellraw @s [{"color":"green","text":"ルールなどは"},{"click_event":{"action":"open_url","url":"https://discord.gg/pFwAZDCXcY"},"color":"white","text":"こちら","underlined":true},{"color":"green","text":"から"}]
 
 
 ##待機中だったら実行
+    scoreboard players reset @s Znsi.Leave
     execute if data storage glance: {State:"InGame"} run return 0
 
 
@@ -26,7 +27,6 @@
     scoreboard players reset @s Znsi.Kill
     scoreboard players reset @s Znsi.Hit
     scoreboard players reset @s Znsi.Deathcount
-    scoreboard players reset @s Znsi.Leave
     scoreboard players reset @s Znsi.UpgradeTimer
     scoreboard players reset @s Znsi.Replacement
 

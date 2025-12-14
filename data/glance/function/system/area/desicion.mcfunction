@@ -8,7 +8,7 @@
     execute as @e[tag=lottery_area,limit=1] at @s store result storage glance: Area.Pos.x int 1 run data get entity @s Pos[0]
     execute as @e[tag=lottery_area,limit=1] at @s store result storage glance: Area.Pos.y int 1 run data get entity @s Pos[1]
     execute as @e[tag=lottery_area,limit=1] at @s store result storage glance: Area.Pos.z int 1 run data get entity @s Pos[2]
-    tellraw @a ["今回の中心：",{"nbt":"Area.Pos.x","storage":"glance:"},",",{"nbt":"Area.Pos.y","storage":"glance:"},",",{"nbt":"Area.Pos.z","storage":"glance:"}]
+    #tellraw @a ["今回の中心：",{"nbt":"Area.Pos.x","storage":"glance:"},",",{"nbt":"Area.Pos.y","storage":"glance:"},",",{"nbt":"Area.Pos.z","storage":"glance:"}]
     kill @s
     kill @e[type=marker,tag=InArea]
 

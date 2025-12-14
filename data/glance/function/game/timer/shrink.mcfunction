@@ -33,7 +33,7 @@
     execute if score *** Znsi.Phase matches 4 run worldborder damage buffer 5
     execute if score *** Znsi.Phase matches 5 run worldborder set 20 30
     execute if score *** Znsi.Phase matches 5 run worldborder damage buffer 3
-    execute if score *** Znsi.Phase matches 6 run function glance:game/timer/final
+    execute if score *** Znsi.Phase matches 6 as @e[tag=lottery_area] at @s run function glance:game/timer/final
 
 
 ##タイマー減らす
