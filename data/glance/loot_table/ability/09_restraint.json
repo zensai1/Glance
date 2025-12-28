@@ -64,12 +64,17 @@
                   "italic": false
                 },
                 {
-                  "text": "矢を当てた時相手を10秒間抑制状態にする",
+                  "text": "矢を当てた時相手を抑制状態にする",
                   "color": "white",
                   "italic": false
                 },
                 {
                   "text": "抑制状態中は異能を使用できない",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "抑制状態は異能を切り替えることで解除できる",
                   "color": "white",
                   "italic": false
                 },

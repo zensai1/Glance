@@ -18,3 +18,4 @@
 
 ##リセット
     function glance:game/reset
+    execute as @a at @s run function glance:system/dat_init

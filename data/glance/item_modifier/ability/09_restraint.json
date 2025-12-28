@@ -25,12 +25,17 @@
         "italic": false
       },
       {
-        "text": "矢を命中させると、10秒間抑制状態になる。",
+        "text": "矢を命中させると、相手を抑制状態にする。",
         "color": "white",
         "italic": false
       },
       {
         "text": "抑制状態の時、異能を使えない。",
+        "color": "white",
+        "italic": false
+       },
+       {
+        "text": "抑制状態は異能を切り替えることで解除できる。",
         "color": "white",
         "italic": false
        },

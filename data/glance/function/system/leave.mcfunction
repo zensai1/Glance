@@ -14,9 +14,12 @@
 
 
 ##いろんな処理
+    scoreboard players set @a Znsi.Integer 0
+    scoreboard players set @a Znsi.Decimal 0
     scoreboard players set @s Znsi.MaxArrows 1
     scoreboard players set @s Znsi.MaxMP 5
     scoreboard players set @s Znsi.MaxReload 100
+    scoreboard players set @a Znsi.Inv 0
     scoreboard players reset @s Znsi.Restraint
     scoreboard players reset @s Znsi.Arrows
     scoreboard players reset @s Znsi.Ability
@@ -34,6 +37,7 @@
 ##Tag処理
     tag @s remove Ability_Using
     tag @s remove Dashing
+    tag @s remove Haste
     tag @s remove Memory
     tag @s remove Reconnaissance
     tag @s remove Reflection
@@ -49,6 +53,8 @@
 
 ##attribute処理
     attribute @s scale base reset
+    attribute @s movement_speed base reset
+    attribute @s jump_strength base reset
 
 
 ##プレイヤー

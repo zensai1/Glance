@@ -7,7 +7,7 @@
     effect clear @s invisibility
     effect clear @s resistance
     attribute @s scale base reset
-    scoreboard players remove @s Znsi.MP 2
+    scoreboard players remove @s Znsi.MP 3
 
 
 ##乗ってるやつをkill

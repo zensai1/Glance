@@ -21,6 +21,8 @@
 
 ##スコアボード処理
     scoreboard players set *** Znsi.Phase 0
+    scoreboard players set @a Znsi.Integer 0
+    scoreboard players set @a Znsi.Decimal 0
     scoreboard players set @a Znsi.MaxArrows 1
     scoreboard players set @a Znsi.MaxMP 5
     scoreboard players set @a Znsi.MaxReload 100
@@ -41,6 +43,7 @@
 
 ##Tag処理
     tag @a remove Alive
+    tag @a remove Haste
     tag @a remove Ability_Using
     tag @a remove Dashing
     tag @a remove Memory

@@ -30,12 +30,12 @@
         "italic": false
     },
     {
-        "text": "ドローンの視点の時にプレイヤーを5秒間見た時",
+        "text": "ドローンの視点の時にプレイヤーを視認した時",
         "color": "white",
         "italic": false 
     },
     {
-        "text": "エメラルド1個を入手する(1回の偵察で1回)",
+        "text": "異能終了時に、エメラルド1個を入手する。",
         "color": "white",
         "italic": false 
     },

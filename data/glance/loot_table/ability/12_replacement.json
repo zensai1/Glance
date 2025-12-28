@@ -57,6 +57,69 @@
                   "text": "右クリックで使用",
                   "color": "green",
                   "italic": false
+                },
+                {
+                  "text": "「入替」の力が封じられた宝珠",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "使用すると最後に撃った矢と",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "自分の位置を入れ替える。",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "スニークしながら使用すると最後に矢を当てた相手の位置と",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "自分の位置を入れ替える。",
+                  "color": "white",
+                  "italic": false
+                },
+                "　　",
+                {
+                  "text": "操作",
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.swapOffhand",
+                      "extra": [
+                        "キー(弓)] - 矢と自分の位置を入れ替える"
+                      ]
+                    }
+                  ],
+                  "color": "green",
+                  "italic": false
+                },
+                {
+                  "text": "[",
+                  "extra": [
+                    {
+                      "keybind": "key.sneak",
+                      "extra": [
+                        "しながら",
+                        {
+                          "keybind": "key.swapOffhand",
+                          "extra": [
+                            "キー(弓)] - 相手と自分の位置を入れ替える"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "color": "green",
+                  "italic": false
                 }
               ],
               "mode": "replace_all"
